@@ -26,7 +26,7 @@ const Hero = () => {
         {/* Sponsor Logos */}
         <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 mb-12">
           {sponsors.map((sponsor) => (
-            <div key={sponsor.name} className="bg-background/90 backdrop-blur-sm rounded-lg p-3 md:p-4 shadow-lg">
+            <div key={sponsor.name} className="p-2">
               <img 
                 src={sponsor.logo} 
                 alt={sponsor.name}

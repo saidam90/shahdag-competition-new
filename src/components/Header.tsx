@@ -15,19 +15,19 @@ const Header = () => {
           <a href="/#welcome" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Welcome
           </a>
-          <a href="/circuits" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <a href="/#circuits" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Circuits
           </a>
-          <a href="/gear" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <a href="/#gear" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Gear
           </a>
-          <a href="/accommodation" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <a href="/#accommodation" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Accommodation
           </a>
-          <a href="/transportation" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <a href="/#transportation" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             Transportation
           </a>
-          <a href="/faq" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <a href="/#faq" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             FAQ
           </a>
         </nav>

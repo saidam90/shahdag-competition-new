@@ -6,7 +6,7 @@ const Welcome = () => {
     <section id="welcome" className="pt-10 bg-background">
       <div className="container mx-auto px-4">
         {/* Welcome Section */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+        <div className="flex justify-center gap-12 items-center mb-20 mx-10">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-5xl font-bold text-primary leading-[2]">
               Join the Championship
@@ -21,7 +21,7 @@ const Welcome = () => {
             <img
               src={winnersImage}
               alt="Ski mountaineering competition"
-              className="w-full h-full object-cover"
+              className="w-[1500px] h-full object-contain"
             />
           </div>
         </div>

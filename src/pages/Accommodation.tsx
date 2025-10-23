@@ -12,17 +12,17 @@ const Accommodation = () => {
         {
           type: "Fullboard (includes all meals):",
           rooms: [
-            { name: "Single Room", price: "190 EUR per night" },
-            { name: "Double Room", price: "235 EUR per night" },
-            { name: "Triple Room", price: "320 EUR per night" },
+            { name: "Single Room", price: "€190 per night" },
+            { name: "Double Room", price: "€235 per night" },
+            { name: "Triple Room", price: "€320 per night" },
           ],
         },
         {
           type: "Halfboard:",
           rooms: [
-            { name: "Single Room", price: "170 EUR per night" },
-            { name: "Double Room", price: "195 EUR per night" },
-            { name: "Triple Room", price: "250 EUR per night" },
+            { name: "Single Room", price: "€170 per night" },
+            { name: "Double Room", price: "€195 per night" },
+            { name: "Triple Room", price: "€250 per night" },
           ],
         },
       ],
@@ -36,15 +36,15 @@ const Accommodation = () => {
         {
           type: "Fullboard (includes all meals):",
           rooms: [
-            { name: "Shared room for 4 adults", price: "95 EUR per night" },
-            { name: "Shared room for 6 adults", price: "90 EUR per night" },
+            { name: "Shared room for 4 adults", price: "€95 per night" },
+            { name: "Shared room for 6 adults", price: "€90 per night" },
           ],
         },
         {
           type: "Halfboard:",
           rooms: [
-            { name: "Shared room for 4 adults", price: "72 EUR per night" },
-            { name: "Shared room for 6 adults", price: "67 EUR per night" },
+            { name: "Shared room for 4 adults", price: "€72 per night" },
+            { name: "Shared room for 6 adults", price: "€67 per night" },
           ],
         },
       ],
@@ -60,7 +60,7 @@ const Accommodation = () => {
           rooms: [
             {
               name: "Rate per person (shared room)",
-              price: "90 EUR per night",
+              price: "€90 per night",
             },
           ],
         },
@@ -69,7 +69,7 @@ const Accommodation = () => {
           rooms: [
             {
               name: "Rate per person (shared room)",
-              price: "70 EUR per night",
+              price: "€70 per night",
             },
           ],
         },
@@ -80,7 +80,10 @@ const Accommodation = () => {
   ];
 
   return (
-    <section id="accommodation" className="py-16 px-4 bg-background scroll-mt-20">
+    <section
+      id="accommodation"
+      className="py-16 px-4 bg-background scroll-mt-20"
+    >
       <div className="container mx-auto max-w-7xl">
         <h1 className="text-4xl md:text-5xl font-bold text-primary text-center mb-12">
           Accommodation
@@ -88,7 +91,10 @@ const Accommodation = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {accommodationOptions.map((option, idx) => (
-            <div key={idx} className="bg-card rounded-2xl shadow-lg overflow-hidden border border-border flex flex-col">
+            <div
+              key={idx}
+              className="bg-card rounded-2xl shadow-md overflow-hidden flex flex-col hover:shadow-xl"
+            >
               <div className="overflow-hidden">
                 <img
                   src={option.image}

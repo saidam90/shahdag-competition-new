@@ -35,7 +35,7 @@ const Gear = () => {
     <section id="gear" className="py-16 px-4 bg-background scroll-mt-20">
       <div className="container mx-auto max-w-6xl">
         <h1 className="text-4xl md:text-5xl font-bold text-primary text-center">
-          Technical details & rules
+          Gear & Technical details
         </h1>
 
         <p className="text-center text-lg my-4">
@@ -56,9 +56,9 @@ const Gear = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {gearCategories.map((category, idx) => (
-            <Card key={idx} className="bg-icon-gold text-black overflow-hidden">
+            <Card key={idx} className="bg-icon-gold text-gray overflow-hidden">
               <CardContent className="p-16">
-                <h2 className="text-2xl font-bold mb-6 text-center">
+                <h2 className="text-2xl font-bold mb-8 text-center">
                   {category.title}
                 </h2>
 

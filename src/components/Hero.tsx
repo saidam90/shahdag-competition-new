@@ -75,7 +75,7 @@ const Hero = () => {
           March 3 - 8, 2026
         </p>
 
-        <p className="text-lg md:text-xl text-foreground uppercase">
+        <p className="text-lg md:text-xl text-foreground">
           Shahdag Mountain Resort, Azerbaijan
         </p>
       </div>

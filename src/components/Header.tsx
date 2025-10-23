@@ -8,6 +8,7 @@ const Header = () => {
 
   const navLinks = [
     { href: "/#home", label: "Home" },
+    { href: "/#agenda", label: "Agenda" },
     // { href: "/#circuits", label: "Circuits" },
     { href: "/#gear", label: "Gear" },
     { href: "/#accommodation", label: "Accommodation" },
@@ -15,14 +16,27 @@ const Header = () => {
     { href: "/#faq", label: "FAQ" },
   ];
 
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+    const id = href.replace("/#", "");
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-white/30">
       <div className="container mx-auto px-4 py-3 flex items-center justify-end">
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               {link.label}
@@ -42,7 +56,10 @@ const Header = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => {
+                    handleNavClick(e, link.href);
+                    setOpen(false);
+                  }}
                   className="text-lg font-medium text-foreground hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-accent"
                 >
                   {link.label}

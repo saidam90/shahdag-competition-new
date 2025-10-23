@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -47,7 +45,7 @@ const FAQ = () => {
       question: "How can I book accommodation?",
       answer: (
         <p>
-          To book ACCOMMODATION, simply select one of the options mentioned
+          To book accommodation, simply select one of the options mentioned
           above and email us at{" "}
           <a
             href="mailto:reservations@shahdag.az"
@@ -87,57 +85,47 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
+    <section id="faq" className="faq py-24 px-4 bg-background scroll-mt-20">
+      <div className="container mx-auto max-w-4xl">
+        <h1 className="text-4xl md:text-5xl font-bold text-primary text-center mb-12">
+          Frequently Asked Questions
+        </h1>
 
-      <main className="flex-1 pt-20">
-        <section className="faq py-16 px-4 bg-background">
-          <div className="container mx-auto max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary text-center mb-12">
-              FAQ
-            </h1>
+        <div className="">
+          {faqs.map((faq, idx) => {
+            const isOpen = openIndex === idx;
+            return (
+              <div key={idx} className="py-4">
+                <button
+                  onClick={() => toggleQuestion(idx)}
+                  aria-expanded={isOpen}
+                  className="w-full flex items-center justify-between text-left focus:outline-none group"
+                >
+                  <span className="text-lg md:text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                    {faq.question}
+                  </span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-primary transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
 
-            <div className="">
-              {faqs.map((faq, idx) => {
-                const isOpen = openIndex === idx;
-                return (
-                  <div key={idx} className="py-4">
-                    <button
-                      onClick={() => toggleQuestion(idx)}
-                      aria-expanded={isOpen}
-                      className="w-full flex items-center justify-between text-left focus:outline-none group"
-                    >
-                      <span className="text-lg md:text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
-                        {faq.question}
-                      </span>
-                      <ChevronDown
-                        className={`w-5 h-5 text-primary transition-transform duration-300 ${
-                          isOpen ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-
-                    <div
-                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                        isOpen
-                          ? "max-h-96 opacity-100 mt-3"
-                          : "max-h-0 opacity-0"
-                      }`}
-                    >
-                      <div className="text-foreground leading-relaxed">
-                        {faq.answer}
-                      </div>
-                    </div>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    isOpen ? "max-h-96 opacity-100 mt-3" : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="text-foreground leading-relaxed">
+                    {faq.answer}
                   </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 };
 

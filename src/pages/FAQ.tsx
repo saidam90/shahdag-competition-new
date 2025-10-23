@@ -85,7 +85,10 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="faq py-24 px-4 bg-background scroll-mt-20">
+    <section
+      id="faq"
+      className="faq mb-16 md:py-24 px-4 bg-background scroll-mt-20"
+    >
       <div className="container mx-auto max-w-4xl">
         <h1 className="text-4xl md:text-5xl font-bold text-primary text-center mb-12">
           Frequently Asked Questions

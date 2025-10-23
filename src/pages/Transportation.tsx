@@ -2,7 +2,10 @@ import transportationImage from "@/assets/transportation.png";
 
 const Transportation = () => {
   return (
-    <section id="transportation" className="py-16 px-4 bg-background scroll-mt-20">
+    <section
+      id="transportation"
+      className="md:py-16 px-4 bg-background scroll-mt-20"
+    >
       <div className="container mx-auto max-w-6xl">
         <h1 className="text-4xl md:text-5xl font-bold text-primary text-center mb-12">
           Transportation

@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-white/30">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-white/30 py-2">
       <div className="container mx-auto px-4 py-3 flex items-center justify-end">
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (

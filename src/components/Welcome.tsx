@@ -6,7 +6,7 @@ const Welcome = () => {
     <section id="welcome" className="pt-10 bg-background">
       <div className="container mx-auto px-4">
         {/* Welcome Section */}
-        <div className="flex justify-center gap-12 items-center mb-20 mx-10">
+        <div className="flex flex-col md:flex-row justify-center gap-12 items-center mb-20 md:mx-10">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-5xl font-bold text-primary leading-[2]">
               Join the Championship
@@ -17,11 +17,11 @@ const Welcome = () => {
               breathtaking beauty of Shahdag.
             </p>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <div className="rounded-2xl overflow-hidden shadow-2xl w-full md:w-auto">
             <img
               src={winnersImage}
               alt="Ski mountaineering competition"
-              className="w-[1500px] h-full object-contain"
+              className="w-full md:w-[1500px] h-full object-contain"
             />
           </div>
         </div>

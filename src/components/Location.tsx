@@ -23,7 +23,7 @@ const Location = () => {
             <img
               src={shahdagMap}
               alt="Shahdag Mountain Resort Map"
-              className="w-[800px] h-auto py-8 rounded-xl"
+              className="w-[700px] h-auto py-8 rounded-xl"
             />
           </div>
 

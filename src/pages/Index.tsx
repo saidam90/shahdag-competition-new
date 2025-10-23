@@ -212,9 +212,9 @@ const Index = () => {
       <Header />
       <Hero />
       <Welcome />
+      <Location />
       <Agenda />
       {/* <Prizes /> */}
-      <Location />
 
       {/* Circuits Section */}
       {/* <section id="circuits" className="py-12 md:py-20 px-4 scroll-mt-20">

@@ -3,7 +3,7 @@ import { Award, Trophy, Mountain } from "lucide-react";
 
 const Welcome = () => {
   return (
-    <section id="welcome" className="pt-16 bg-background">
+    <section id="welcome" className="pt-10 bg-background">
       <div className="container mx-auto px-4">
         {/* Welcome Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">

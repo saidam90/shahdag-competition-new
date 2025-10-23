@@ -1,41 +1,53 @@
 import { MapPin, Mountain, Phone, Mail } from "lucide-react";
+import shahdagMap from "@/assets/shahdag-map.png";
 
 const Location = () => {
   return (
-    <section id="location" className="py-20 md:py-32 bg-secondary/30">
+    <section id="location" className="pt-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
-            <MapPin className="w-5 h-5 text-primary" />
-            <span className="text-sm font-urbanist font-semibold text-primary">VENUE</span>
+          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-4 bg-icon-gold">
+            <MapPin className="w-5 h-5 text-white bg-icon-gold" />
+            <span className="text-sm font-urbanist font-semibold text-white">
+              VENUE
+            </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-urbanist font-bold text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-urbanist font-bold text-primary my-4">
             Shahdag Mountain Resort
           </h2>
-          <p className="text-lg font-urbanist text-muted-foreground max-w-2xl mx-auto">
-            Experience world-class ski mountaineering at Azerbaijan's premier mountain destination
+          <p className="text-lg font-urbanist text-foreground max-w-2xl mx-auto">
+            Experience world-class ski mountaineering at Azerbaijan's premier
+            mountain destination
           </p>
+
+          <div className="rounded-xl">
+            <img
+              src={shahdagMap}
+              alt="Shahdag Mountain Resort Map"
+              className="w-full h-auto object-contain"
+            />
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div className="bg-card rounded-xl p-8 shadow-lg border border-border">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="bg-primary/10 rounded-lg p-3">
+        {/* <div className="max-w-7xl mx-auto space-y-8"> */}
+        {/* <div className="bg-card rounded-xl p-8 max-w-3xl mx-auto"> */}
+        {/* <div className="flex items-start gap-4 mb-6"> */}
+        {/* <div className="bg-primary/10 rounded-lg p-3">
                 <Mountain className="w-6 h-6 text-primary" />
-              </div>
-              <div>
+              </div> */}
+        {/* <div>
                 <h3 className="text-xl font-urbanist font-bold text-card-foreground mb-2">
                   About the Resort
                 </h3>
                 <p className="text-muted-foreground font-urbanist">
-                  Shahdag Mountain Resort is Azerbaijan's premier ski destination, offering 
-                  world-class facilities and breathtaking mountain landscapes perfect for 
-                  international competitions.
+                  Shahdag Mountain Resort is Azerbaijan's premier ski
+                  destination, offering world-class facilities and breathtaking
+                  mountain landscapes perfect for international competitions.
                 </p>
               </div>
-            </div>
+            </div> */}
 
-            <div className="space-y-4">
+        {/* <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-primary" />
                 <p className="text-sm font-urbanist text-muted-foreground">
@@ -54,45 +66,9 @@ const Location = () => {
                   info@shahdagresort.com
                 </p>
               </div>
-            </div>
-          </div>
-
-          <div className="bg-card rounded-xl p-8 shadow-lg border border-border">
-            <h3 className="text-xl font-urbanist font-bold text-card-foreground mb-6">
-              Accommodation
-            </h3>
-            <div className="space-y-4">
-              <div className="border-l-4 border-primary pl-4">
-                <h4 className="font-urbanist font-semibold text-card-foreground mb-1">
-                  Shahdag Hotel & Spa
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  Luxury 5-star accommodation with full amenities
-                </p>
-              </div>
-              <div className="border-l-4 border-primary/50 pl-4">
-                <h4 className="font-urbanist font-semibold text-card-foreground mb-1">
-                  Park Chalet
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  Comfortable mountain chalets with stunning views
-                </p>
-              </div>
-              <div className="border-l-4 border-primary/50 pl-4">
-                <h4 className="font-urbanist font-semibold text-card-foreground mb-1">
-                  Zirve Hotel
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  Modern hotel facilities close to the slopes
-                </p>
-              </div>
-            </div>
-            
-            <p className="mt-6 text-sm font-urbanist text-muted-foreground italic">
-              Lunch will be served at Miras Restaurant (Shahdag Hotel & Spa)
-            </p>
-          </div>
-        </div>
+            </div> */}
+        {/* </div> */}
+        {/* </div> */}
       </div>
     </section>
   );

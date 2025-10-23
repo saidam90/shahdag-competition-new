@@ -57,17 +57,17 @@ const Hero = () => {
         </div>
 
         {/* Title */}
-        <h1 className="mt-32 md:mt-16 text-4xl md:text-6xl lg:text-7xl font-montserrat font-normal text-primary mb-6">
+        <h1 className="mt-32 md:mt-40 text-4xl md:text-6xl lg:text-7xl font-lato font-bold text-primary mb-6">
           ISMF European Championship 2025
         </h1>
 
         {/* Dates */}
-        <p className="mt-24 md:mt-12 text-xl md:text-2xl font-inter font-medium text-foreground mb-3">
-          March 4 - March 8, 2026
+        <p className="mt-24 md:mt-12 text-xl md:text-2xl font-lato font-medium text-foreground mb-3">
+          March 3 - 8, 2026
         </p>
 
-        <p className="text-lg md:text-xl font-inter text-foreground uppercase">
-          Shahdag, Azerbaijan
+        <p className="text-lg md:text-xl font-lato text-foreground uppercase">
+          World Cup Shahdag, Azerbaijan
         </p>
       </div>
 

@@ -3,15 +3,15 @@ import { Award, Trophy, Mountain } from "lucide-react";
 
 const Welcome = () => {
   return (
-    <section id="welcome" className="py-20 md:py-32 bg-background">
+    <section id="welcome" className="pt-20 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         {/* Welcome Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-5xl font-montserrat font-normal text-primary uppercase leading-loose">
+            <h2 className="text-3xl md:text-5xl font-lato font-bold text-primary leading-loose">
               Join the European Championship
             </h2>
-            <p className="text-lg font-inter text-muted-foreground leading-relaxed">
+            <p className="text-lg font-lato text-foreground leading-relaxed">
               Join us for the ISMF European Championship - five days of
               excitement, competition, and camaraderie surrounded by the
               breathtaking beauty of Shahdag.
@@ -29,39 +29,39 @@ const Welcome = () => {
         {/* Competition Highlights */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           <div className="bg-card rounded-xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow text-center">
-            <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
-              <Mountain className="w-7 h-7 text-primary" />
+            <div className="bg-[#08488b] w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <Mountain className="w-7 h-7 text-primary text-white" />
             </div>
-            <h3 className="text-2xl font-montserrat font-bold text-card-foreground mb-3">
+            <h3 className="text-2xl font-lato font-bold text-card-foreground mb-3">
               Join the thrill
             </h3>
-            <p className="text-foreground font-inter">
+            <p className="text-foreground font-lato">
               Embrace the challenge and conquer the mountain at Shahdag Mountain
               Resort!
             </p>
           </div>
 
           <div className="bg-card rounded-xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow text-center">
-            <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
-              <Trophy className="w-7 h-7 text-primary" />
+            <div className="bg-[#08488b] w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <Trophy className="w-7 h-7 text-primary text-white" />
             </div>
-            <h3 className="text-2xl font-montserrat font-bold text-card-foreground mb-3">
+            <h3 className="text-2xl font-lato font-bold text-card-foreground mb-3">
               Compete for glory
             </h3>
-            <p className="text-foreground font-inter">
+            <p className="text-foreground font-lato">
               Participate for glory and substantial money prizes for the
               winners!
             </p>
           </div>
 
           <div className="bg-card rounded-xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow text-center">
-            <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
-              <Award className="w-7 h-7 text-primary" />
+            <div className="bg-[#08488b] w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
+              <Award className="w-7 h-7 text-primary text-white" />
             </div>
-            <h3 className="text-2xl font-montserrat font-bold text-card-foreground mb-3">
+            <h3 className="text-2xl font-lato font-bold text-card-foreground mb-3">
               Reap the rewards
             </h3>
-            <p className="text-foreground font-inter">
+            <p className="text-foreground font-lato">
               Showcase your skill and determination in this prestigious
               competition.
             </p>

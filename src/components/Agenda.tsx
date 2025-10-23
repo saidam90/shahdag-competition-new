@@ -6,7 +6,10 @@ const agendaData = [
     events: [
       { time: "07:00 - 10:00", title: "Breakfast" },
       { time: "17:00 - 17:45", title: "Sprint race captains meeting" },
-      { time: "18:00 - 19:00", title: "Official announcement of first 5 racers" },
+      {
+        time: "18:00 - 19:00",
+        title: "Official announcement of first 5 racers",
+      },
     ],
   },
   {
@@ -14,7 +17,10 @@ const agendaData = [
     events: [
       { time: "06:30 - 09:30", title: "Breakfast" },
       { time: "10:45", title: "Official opening" },
-      { time: "11:15", title: "Race Recognition - All categories (Women | Men)" },
+      {
+        time: "11:15",
+        title: "Race Recognition - All categories (Women | Men)",
+      },
       { time: "12:15", title: "Qualification Women" },
       { time: "12:35", title: "Qualification Men" },
       { time: "15:20", title: "Flower Ceremony" },
@@ -54,23 +60,26 @@ const Agenda = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
             <Calendar className="w-5 h-5 text-primary" />
-            <span className="text-sm font-inter font-semibold text-primary">EVENT SCHEDULE</span>
+            <span className="text-sm font-lato font-semibold text-primary">
+              EVENT SCHEDULE
+            </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 mt-4">
             Agenda
           </h2>
-          <p className="text-lg font-inter text-muted-foreground max-w-2xl mx-auto">
-            Four days of intense competition and celebration at Shahdag Mountain Resort
+          <p className="text-lg font-lato text-black max-w-2xl mx-auto">
+            Four days of intense competition and celebration at Shahdag Mountain
+            Resort
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {agendaData.map((dayData, idx) => (
-            <div 
+            <div
               key={idx}
               className="bg-card rounded-xl p-8 shadow-lg border border-border hover:shadow-xl transition-all"
             >
-              <h3 className="text-2xl font-montserrat font-bold text-card-foreground mb-6 pb-4 border-b border-border">
+              <h3 className="text-2xl font-lato font-bold text-black mb-6 pb-4 border-b border-border">
                 {dayData.day}
               </h3>
               <div className="space-y-4">
@@ -80,10 +89,10 @@ const Agenda = () => {
                       <Clock className="w-4 h-4 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-sm font-inter font-semibold text-primary mb-1">
+                      <p className="text-sm font-lato font-semibold text-black mb-1">
                         {event.time}
                       </p>
-                      <p className="text-sm font-inter text-muted-foreground">
+                      <p className="text-sm font-lato text-black">
                         {event.title}
                       </p>
                     </div>

@@ -7,12 +7,12 @@ const Prizes = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-event-accent/10 rounded-full px-4 py-2 mb-4">
             <Star className="w-5 h-5 text-event-accent" />
-            <span className="text-sm font-inter font-semibold text-event-accent">REWARDS</span>
+            <span className="text-sm font-lato font-semibold text-event-accent">REWARDS</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-montserrat font-bold text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-lato font-bold text-primary mb-4">
             Compete and Win Rewards!
           </h2>
-          <p className="text-lg font-inter text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg font-lato text-muted-foreground max-w-2xl mx-auto">
             Participate for glory and substantial money prizes for the winners
           </p>
         </div>
@@ -22,13 +22,13 @@ const Prizes = () => {
             <div className="bg-yellow-400 dark:bg-yellow-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Medal className="w-10 h-10 text-yellow-900 dark:text-yellow-100" />
             </div>
-            <h3 className="text-2xl font-montserrat font-bold text-yellow-900 dark:text-yellow-100 mb-2">
+            <h3 className="text-2xl font-lato font-bold text-yellow-900 dark:text-yellow-100 mb-2">
               1st Place
             </h3>
-            <p className="text-4xl font-montserrat font-bold text-yellow-600 dark:text-yellow-400 mb-2">
+            <p className="text-4xl font-lato font-bold text-yellow-600 dark:text-yellow-400 mb-2">
               Gold
             </p>
-            <p className="text-sm font-inter text-yellow-700 dark:text-yellow-300">
+            <p className="text-sm font-lato text-yellow-700 dark:text-yellow-300">
               Champion's Prize
             </p>
           </div>
@@ -37,13 +37,13 @@ const Prizes = () => {
             <div className="bg-gray-400 dark:bg-gray-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Medal className="w-10 h-10 text-gray-900 dark:text-gray-100" />
             </div>
-            <h3 className="text-2xl font-montserrat font-bold text-gray-900 dark:text-gray-100 mb-2">
+            <h3 className="text-2xl font-lato font-bold text-gray-900 dark:text-gray-100 mb-2">
               2nd Place
             </h3>
-            <p className="text-4xl font-montserrat font-bold text-gray-600 dark:text-gray-400 mb-2">
+            <p className="text-4xl font-lato font-bold text-gray-600 dark:text-gray-400 mb-2">
               Silver
             </p>
-            <p className="text-sm font-inter text-gray-700 dark:text-gray-300">
+            <p className="text-sm font-lato text-gray-700 dark:text-gray-300">
               Runner-up Prize
             </p>
           </div>
@@ -52,13 +52,13 @@ const Prizes = () => {
             <div className="bg-orange-400 dark:bg-orange-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Medal className="w-10 h-10 text-orange-900 dark:text-orange-100" />
             </div>
-            <h3 className="text-2xl font-montserrat font-bold text-orange-900 dark:text-orange-100 mb-2">
+            <h3 className="text-2xl font-lato font-bold text-orange-900 dark:text-orange-100 mb-2">
               3rd Place
             </h3>
-            <p className="text-4xl font-montserrat font-bold text-orange-600 dark:text-orange-400 mb-2">
+            <p className="text-4xl font-lato font-bold text-orange-600 dark:text-orange-400 mb-2">
               Bronze
             </p>
-            <p className="text-sm font-inter text-orange-700 dark:text-orange-300">
+            <p className="text-sm font-lato text-orange-700 dark:text-orange-300">
               Third Place Prize
             </p>
           </div>
@@ -67,7 +67,7 @@ const Prizes = () => {
         <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-3 bg-primary/10 rounded-full px-6 py-3">
             <DollarSign className="w-6 h-6 text-primary" />
-            <p className="text-lg font-inter font-semibold text-primary">
+            <p className="text-lg font-lato font-semibold text-primary">
               Substantial cash prizes for top performers
             </p>
           </div>

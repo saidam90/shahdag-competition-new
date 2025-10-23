@@ -33,7 +33,7 @@ const Hero = () => {
           backgroundImage: `url(${heroImage})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/70 to-white/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-white/95" />
       </div>
 
       {/* Content */}
@@ -52,7 +52,7 @@ const Hero = () => {
         </div>
 
         {/* Title */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold text-primary mb-6">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-normal text-primary mb-6">
           ISMF European Championship 2025
         </h1>
 
@@ -68,8 +68,8 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex items-start justify-center p-2">
-          <div className="w-1.5 h-3 bg-primary/50 rounded-full" />
+        <div className="w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center p-2">
+          <div className="w-1.5 h-3 bg-primary rounded-full" />
         </div>
       </div>
     </section>

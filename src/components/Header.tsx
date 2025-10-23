@@ -1,4 +1,4 @@
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
@@ -18,12 +18,6 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <div className="flex items-center gap-6">
-          <h2 className="text-lg md:text-xl font-normal text-primary">
-            Shahdag World Cup 2025
-          </h2>
-        </div>
-
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <a

@@ -1,25 +1,30 @@
 import heroImage from "@/assets/hero-bg.jpg";
+import ministryLogo from "@/assets/ministry-of-youth-logo.png";
+import azerbaijanLogo from "@/assets/azerbaijan-logo.png";
+import shahdagLogo from "@/assets/shahdag-logo.png";
+import ismfLogo from "@/assets/ismf-logo.png";
+import azSportsLogo from "@/assets/az-sports-logo.png";
 
 const sponsors = [
   {
     name: "ISMF",
-    logo: "https://hsjfj.my.canva.site/_assets/media/658e50a9e490b2402c77f98de1bace56.png",
+    logo: ismfLogo,
   },
   {
     name: "Azerbaijan Winter Sports",
-    logo: "https://hsjfj.my.canva.site/_assets/media/4ceef982077943679d17871d85df4c3c.png",
+    logo: azSportsLogo,
   },
   {
     name: "Ministry",
-    logo: "https://hsjfj.my.canva.site/_assets/media/8fa78a7cd050e089e0f57e1b5f12da02.png",
+    logo: ministryLogo,
   },
   {
     name: "Azerbaijan Olympic",
-    logo: "https://hsjfj.my.canva.site/_assets/media/4eda573e6320b9e91e4aa055749cf9a4.png",
+    logo: azerbaijanLogo,
   },
   {
     name: "Shahdag",
-    logo: "https://hsjfj.my.canva.site/_assets/media/c6af4a5574e20620cd25147b42804b83.png",
+    logo: shahdagLogo,
   },
 ];
 
@@ -33,7 +38,7 @@ const Hero = () => {
           backgroundImage: `url(${heroImage})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-white/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/85 to-white" />
       </div>
 
       {/* Content */}

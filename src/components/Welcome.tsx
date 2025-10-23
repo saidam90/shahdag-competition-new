@@ -28,40 +28,40 @@ const Welcome = () => {
 
         {/* Competition Highlights */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
-          <div className="bg-card rounded-xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow">
-            <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+          <div className="bg-card rounded-xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow text-center">
+            <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
               <Mountain className="w-7 h-7 text-primary" />
             </div>
             <h3 className="text-2xl font-montserrat font-bold text-card-foreground mb-3">
               Join the thrill
             </h3>
-            <p className="text-muted-foreground font-inter">
+            <p className="text-foreground font-inter">
               Embrace the challenge and conquer the mountain at Shahdag Mountain
               Resort!
             </p>
           </div>
 
-          <div className="bg-card rounded-xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow">
-            <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+          <div className="bg-card rounded-xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow text-center">
+            <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
               <Trophy className="w-7 h-7 text-primary" />
             </div>
             <h3 className="text-2xl font-montserrat font-bold text-card-foreground mb-3">
               Compete for glory
             </h3>
-            <p className="text-muted-foreground font-inter">
+            <p className="text-foreground font-inter">
               Participate for glory and substantial money prizes for the
               winners!
             </p>
           </div>
 
-          <div className="bg-card rounded-xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow">
-            <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+          <div className="bg-card rounded-xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow text-center">
+            <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-4 mx-auto">
               <Award className="w-7 h-7 text-primary" />
             </div>
             <h3 className="text-2xl font-montserrat font-bold text-card-foreground mb-3">
               Reap the rewards
             </h3>
-            <p className="text-muted-foreground font-inter">
+            <p className="text-foreground font-inter">
               Showcase your skill and determination in this prestigious
               competition.
             </p>

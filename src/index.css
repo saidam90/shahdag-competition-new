@@ -2,79 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 221 83% 15%;
+    --foreground: 220 15% 15%; /* neutral dark gray instead of blue */
 
     --card: 0 0% 100%;
-    --card-foreground: 221 83% 15%;
+    --card-foreground: 220 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 221 83% 15%;
+    --popover-foreground: 220 15% 15%;
 
-    --primary: 221 83% 15%;
+    --primary: 220 15% 15%; /* softer, more elegant neutral primary */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 100% 95%;
-    --secondary-foreground: 221 83% 15%;
+    --secondary: 210 25% 96%;
+    --secondary-foreground: 220 15% 20%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 210 20% 97%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 204 94% 94%;
-    --accent-foreground: 221 83% 15%;
+    --accent: 200 60% 92%; /* lighter accent blue */
+    --accent-foreground: 220 15% 20%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 221 83% 15%;
+    --border: 220 15% 90%; /* less visible, soft gray border */
+    --input: 220 15% 90%;
+    --ring: 220 15% 15%;
 
     --radius: 0.75rem;
 
     /* Event-specific colors */
-    --event-blue: 221 83% 15%;
-    --event-sky: 204 94% 65%;
-    --event-accent: 45 93% 47%;
-    
+    --event-blue: 220 65% 35%; /* deeper accent for banners/headings */
+    --event-sky: 200 85% 70%;
+    --event-accent: 45 90% 50%;
+
     /* Gradient */
-    --gradient-hero: linear-gradient(135deg, hsl(221 83% 15% / 0.95), hsl(221 50% 25% / 0.9));
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(220 40% 25% / 0.95),
+      hsl(220 25% 18% / 0.9)
+    );
   }
 
   .dark {
-    --background: 221 83% 15%;
-    --foreground: 0 0% 100%;
+    --background: 220 15% 10%;
+    --foreground: 0 0% 98%;
 
-    --card: 221 50% 20%;
-    --card-foreground: 0 0% 100%;
+    --card: 220 15% 14%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 221 50% 20%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 220 15% 14%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 100%;
-    --primary-foreground: 221 83% 15%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 220 15% 15%;
 
-    --secondary: 221 50% 25%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 221 50% 25%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 215 20% 70%;
 
-    --accent: 221 50% 25%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 200 40% 25%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 63% 31%;
+    --destructive: 0 60% 40%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 221 50% 25%;
-    --input: 221 50% 25%;
-    --ring: 212 27% 84%;
+    --border: 220 10% 22%; /* softer, blends better */
+    --input: 220 10% 22%;
+    --ring: 200 25% 70%;
   }
 }
 

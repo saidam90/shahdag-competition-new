@@ -57,16 +57,16 @@ const Gear = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {gearCategories.map((category, idx) => (
             <Card key={idx} className="bg-icon-gold text-gray overflow-hidden">
-              <CardContent className="p-16">
-                <h2 className="text-2xl font-bold mb-8 text-center">
+              <CardContent className="px-8 py-12 md:px-12 md:py-16">
+                <h2 className="text-xl font-bold mb-8 text-center">
                   {category.title}
                 </h2>
 
-                <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                <div className="flex flex-col items-center gap-4">
                   {category.items.map((item, itemIdx) => (
                     <div key={itemIdx} className="flex items-center gap-2">
-                      <span className="text-xl">{item.icon}</span>
-                      <span className="text-lg">{item.name}</span>
+                      <span className="text-md">{item.icon}</span>
+                      <span className="text-md">{item.name}</span>
                     </div>
                   ))}
                 </div>

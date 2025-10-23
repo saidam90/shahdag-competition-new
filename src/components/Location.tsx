@@ -19,11 +19,11 @@ const Location = () => {
             mountain destination
           </p>
 
-          <div className="max-w-5xl mx-auto">
+          <div className="flex max-w-5xl mx-auto justify-center">
             <img
               src={shahdagMap}
               alt="Shahdag Mountain Resort Map"
-              className="w-full h-auto object-contain py-8 rounded-xl"
+              className="w-[800px] h-auto py-8 rounded-xl"
             />
           </div>
 

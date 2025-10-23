@@ -5,6 +5,7 @@ import shahdagLogo from "@/assets/shahdag-logo.png";
 import ismfLogo from "@/assets/ismf-logo.png";
 import azSportsLogo from "@/assets/az-sports-logo.png";
 import pgiLogo from "@/assets/pgi-logo.png";
+import { ChevronDown } from "lucide-react";
 
 const sponsors = [
   {
@@ -77,11 +78,12 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center p-2">
-          <div className="w-1.5 h-3 bg-primary rounded-full" />
-        </div>
-      </div>
+      <a
+        href="#welcome"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer z-20 hover:opacity-70 transition-opacity"
+      >
+        <ChevronDown className="w-8 h-8 text-primary" />
+      </a>
     </section>
   );
 };

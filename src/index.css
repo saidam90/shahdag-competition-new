@@ -42,6 +42,7 @@ All colors MUST be HSL.
     --event-blue: 220 65% 35%; /* deeper accent for banners/headings */
     --event-sky: 200 85% 70%;
     --event-accent: 45 90% 50%;
+    --icon-gold: 45 23% 66%; /* #B8B09A gold color for icons */
 
     /* Gradient */
     --gradient-hero: linear-gradient(

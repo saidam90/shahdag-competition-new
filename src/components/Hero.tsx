@@ -4,11 +4,20 @@ import azerbaijanLogo from "@/assets/azerbaijan-logo.png";
 import shahdagLogo from "@/assets/shahdag-logo.png";
 import ismfLogo from "@/assets/ismf-logo.png";
 import azSportsLogo from "@/assets/az-sports-logo.png";
+import pgiLogo from "@/assets/pgi-logo.png";
 
 const sponsors = [
   {
     name: "ISMF",
     logo: ismfLogo,
+  },
+  {
+    name: "Shahdag",
+    logo: shahdagLogo,
+  },
+  {
+    name: "PGI",
+    logo: pgiLogo,
   },
   {
     name: "Azerbaijan Winter Sports",
@@ -22,15 +31,11 @@ const sponsors = [
     name: "Azerbaijan Olympic",
     logo: azerbaijanLogo,
   },
-  {
-    name: "Shahdag",
-    logo: shahdagLogo,
-  },
 ];
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-0">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -42,7 +47,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-24 pb-20 md:py-32 text-center flex flex-col justify-start min-h-screen">
+      <div className="relative z-10 container mx-auto px-4 pt-24 pb-20 md:py-30 text-center flex flex-col justify-start min-h-screen">
         {/* Sponsor Logos */}
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 mb-8 md:mb-12">
           {sponsors.map((sponsor) => (
@@ -57,17 +62,17 @@ const Hero = () => {
         </div>
 
         {/* Title */}
-        <h1 className="mt-32 md:mt-40 text-4xl md:text-6xl lg:text-7xl font-lato font-bold text-primary mb-6">
-          ISMF European Championship 2025
+        <h1 className="mt-32 md:mt-32 text-4xl md:text-6xl lg:text-7xl font-urbanist font-bold text-primary mb-6">
+          ISMF European Championship <br /> World Cup Shahdag
         </h1>
 
         {/* Dates */}
-        <p className="mt-24 md:mt-12 text-xl md:text-2xl font-lato font-medium text-foreground mb-3">
+        <p className="mt-24 md:mt-12 text-xl md:text-2xl font-urbanist font-medium text-foreground mb-3">
           March 3 - 8, 2026
         </p>
 
-        <p className="text-lg md:text-xl font-lato text-foreground uppercase">
-          World Cup Shahdag, Azerbaijan
+        <p className="text-lg md:text-xl font-urbanist text-foreground uppercase">
+          Shahdag Mountain Resort, Azerbaijan
         </p>
       </div>
 

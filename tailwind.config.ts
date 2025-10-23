@@ -15,8 +15,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'sans': ['Lato', 'sans-serif'],
-        'lato': ['Lato', 'sans-serif'],
+        'sans': ['Urbanist', 'sans-serif'],
+        'urbanist': ['Urbanist', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -55,6 +55,7 @@ export default {
         'event-blue': "hsl(var(--event-blue))",
         'event-sky': "hsl(var(--event-sky))",
         'event-accent': "hsl(var(--event-accent))",
+        'icon-gold': "hsl(var(--icon-gold))",
       },
       borderRadius: {
         lg: "var(--radius)",

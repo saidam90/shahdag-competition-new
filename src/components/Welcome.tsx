@@ -8,18 +8,18 @@ const Welcome = () => {
         {/* Welcome Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-5xl font-montserrat font-bold text-primary">
-              Welcome to an exhilarating experience at Shahdag Mountain Resort!
+            <h2 className="text-3xl md:text-5xl font-montserrat font-normal text-primary uppercase leading-loose">
+              Join the European Championship
             </h2>
             <p className="text-lg font-inter text-muted-foreground leading-relaxed">
-              We invite you to be part of the Shahdag International Ski-Mountaineering World Cup, 
-              a thrilling event that promises three days of excitement, competition, and camaraderie 
-              amidst the breathtaking landscapes of Shahdag.
+              Join us for the ISMF European Championship - five days of
+              excitement, competition, and camaraderie surrounded by the
+              breathtaking beauty of Shahdag.
             </p>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <img 
-              src={winnersImage} 
+            <img
+              src={winnersImage}
               alt="Ski mountaineering competition"
               className="w-full h-full object-cover"
             />
@@ -36,7 +36,8 @@ const Welcome = () => {
               Join the thrill
             </h3>
             <p className="text-muted-foreground font-inter">
-              Embrace the challenge and conquer the mountain at Shahdag Mountain Resort!
+              Embrace the challenge and conquer the mountain at Shahdag Mountain
+              Resort!
             </p>
           </div>
 
@@ -48,7 +49,8 @@ const Welcome = () => {
               Compete for glory
             </h3>
             <p className="text-muted-foreground font-inter">
-              Participate for glory and substantial money prizes for the winners!
+              Participate for glory and substantial money prizes for the
+              winners!
             </p>
           </div>
 
@@ -60,7 +62,8 @@ const Welcome = () => {
               Reap the rewards
             </h3>
             <p className="text-muted-foreground font-inter">
-              Showcase your skill and determination in this prestigious competition.
+              Showcase your skill and determination in this prestigious
+              competition.
             </p>
           </div>
         </div>

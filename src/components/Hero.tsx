@@ -37,31 +37,31 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-32 text-center">
+      <div className="relative z-10 container mx-auto px-4 pt-24 pb-20 md:py-32 text-center flex flex-col justify-start min-h-screen">
         {/* Sponsor Logos */}
-        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 mb-8 md:mb-12">
           {sponsors.map((sponsor) => (
-            <div key={sponsor.name} className="p-2">
+            <div key={sponsor.name} className="p-1 md:p-2">
               <img
                 src={sponsor.logo}
                 alt={sponsor.name}
-                className="h-12 md:h-16 w-auto object-contain"
+                className="h-10 md:h-16 w-auto object-contain"
               />
             </div>
           ))}
         </div>
 
         {/* Title */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-normal text-primary mb-6">
+        <h1 className="mt-32 md:mt-16 text-4xl md:text-6xl lg:text-7xl font-montserrat font-normal text-primary mb-6">
           ISMF European Championship 2025
         </h1>
 
         {/* Dates */}
-        <p className="text-xl md:text-2xl font-inter font-medium text-foreground mb-3">
-          January 10 - January 13, 2025
+        <p className="mt-24 md:mt-12 text-xl md:text-2xl font-inter font-medium text-foreground mb-3">
+          March 4 - March 8, 2026
         </p>
 
-        <p className="text-lg md:text-xl font-inter text-foreground">
+        <p className="text-lg md:text-xl font-inter text-foreground uppercase">
           Shahdag, Azerbaijan
         </p>
       </div>

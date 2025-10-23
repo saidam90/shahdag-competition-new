@@ -36,7 +36,10 @@ const sponsors = [
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-0">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-0"
+    >
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -63,16 +66,16 @@ const Hero = () => {
         </div>
 
         {/* Title */}
-        <h1 className="mt-32 md:mt-32 text-4xl md:text-6xl lg:text-7xl font-urbanist font-bold text-primary mb-6">
+        <h1 className="mt-32 md:mt-32 text-4xl md:text-5xl lg:text-7xl font-bold text-primary mb-6">
           ISMF European Championship <br /> World Cup Shahdag
         </h1>
 
         {/* Dates */}
-        <p className="mt-24 md:mt-12 text-xl md:text-2xl font-urbanist font-medium text-foreground mb-3">
+        <p className="mt-24 md:mt-12 text-xl md:text-2xl font-medium text-foreground mb-3">
           March 3 - 8, 2026
         </p>
 
-        <p className="text-lg md:text-xl font-urbanist text-foreground uppercase">
+        <p className="text-lg md:text-xl text-foreground uppercase">
           Shahdag Mountain Resort, Azerbaijan
         </p>
       </div>

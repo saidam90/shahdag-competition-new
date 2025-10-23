@@ -81,56 +81,58 @@ const Accommodation = () => {
 
   return (
     <section id="accommodation" className="py-16 px-4 bg-background scroll-mt-20">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-7xl">
         <h1 className="text-4xl md:text-5xl font-bold text-primary text-center mb-12">
           Accommodation
         </h1>
 
-        <div className="space-y-16">
+        <div className="grid md:grid-cols-3 gap-8">
           {accommodationOptions.map((option, idx) => (
-            <div key={idx}>
-              <h2 className="text-3xl font-bold text-primary text-center mb-8">
-                {option.title}
-              </h2>
+            <div key={idx} className="bg-card rounded-2xl shadow-lg overflow-hidden border border-border flex flex-col">
+              <div className="overflow-hidden">
+                <img
+                  src={option.image}
+                  alt={`${option.title} accommodation`}
+                  className="w-full h-64 md:h-72 object-cover"
+                />
+              </div>
 
-              <div className="grid md:grid-cols-2 gap-8 items-start">
-                <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img
-                    src={option.image}
-                    alt={`${option.title} accommodation`}
-                    className="w-full h-auto"
-                  />
-                </div>
+              <div className="p-6 flex flex-col flex-1">
+                <h2 className="text-2xl font-bold text-primary mb-4">
+                  {option.title}
+                </h2>
 
-                <div className="space-y-6">
+                <div className="space-y-4 mb-4 flex-1">
                   {option.rates.map((rate, rateIdx) => (
                     <div key={rateIdx}>
-                      <h3 className="font-semibold text-lg mb-3">
+                      <h3 className="font-semibold text-sm mb-2">
                         {rate.type}
                       </h3>
                       {rate.rooms.map((room, roomIdx) => (
-                        <p key={roomIdx} className="mb-2">
+                        <p key={roomIdx} className="mb-1 text-sm">
                           {room.name}:{" "}
                           <span className="font-semibold">{room.price}</span>
                         </p>
                       ))}
                     </div>
                   ))}
-
-                  <div className="pt-4 space-y-2 whitespace-pre-line text-sm text-muted-foreground">
-                    {option.policy}
-                  </div>
-
-                  <Button
-                    size="lg"
-                    className="w-full md:w-auto bg-primary hover:bg-primary/90"
-                    asChild
-                  >
-                    <a href="mailto:reservations@shahdag.az">
-                      Book accommodation
-                    </a>
-                  </Button>
                 </div>
+
+                <div className="pt-4 border-t border-border mb-4">
+                  <p className="text-xs text-muted-foreground whitespace-pre-line">
+                    {option.policy}
+                  </p>
+                </div>
+
+                <Button
+                  size="lg"
+                  className="w-full bg-primary hover:bg-primary/90"
+                  asChild
+                >
+                  <a href="mailto:reservations@shahdag.az">
+                    Book accommodation
+                  </a>
+                </Button>
               </div>
             </div>
           ))}

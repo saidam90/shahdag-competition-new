@@ -12,11 +12,6 @@ import Gear from "./Gear";
 import Transportation from "./Transportation";
 
 const Index = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const toggleQuestion = (idx: number) => {
-    setOpenIndex(openIndex === idx ? null : idx);
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Header />

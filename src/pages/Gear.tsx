@@ -34,16 +34,16 @@ const Gear = () => {
   return (
     <section id="gear" className="py-16 px-4 bg-background scroll-mt-20">
       <div className="container mx-auto max-w-6xl">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-primary text-center">
           Technical details & rules
         </h1>
 
-        <p className="text-center text-lg mb-8">
+        <p className="text-center text-lg my-4">
           The following equipment is mandatory and ISMF rules will be applied in
           the competition.
         </p>
 
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <a
             href="https://www.ismf-ski.org/rules/"
             target="_blank"
@@ -56,11 +56,8 @@ const Gear = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {gearCategories.map((category, idx) => (
-            <Card
-              key={idx}
-              className="bg-primary text-primary-foreground overflow-hidden"
-            >
-              <CardContent className="p-8">
+            <Card key={idx} className="bg-icon-gold text-black overflow-hidden">
+              <CardContent className="p-16">
                 <h2 className="text-2xl font-bold mb-6 text-center">
                   {category.title}
                 </h2>

@@ -67,7 +67,7 @@ const Agenda = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-icon-gold rounded-full px-4 py-2 mb-4">
             <Calendar className="w-5 h-5 text-white" />
-            <span className="text-sm font-urbanist font-semibold text-white">
+            <span className="text-sm font-semibold text-white">
               EVENT SCHEDULE
             </span>
           </div>
@@ -86,7 +86,7 @@ const Agenda = () => {
                   : ""
               }`}
             >
-              <h3 className="text-2xl font-urbanist font-bold text-primary mb-6 pb-4 border-b border-border">
+              <h3 className="text-2xl font-bold text-primary mb-6 pb-4 border-b border-border">
                 {dayData.day}
               </h3>
               <div className="space-y-4">
@@ -96,10 +96,10 @@ const Agenda = () => {
                       <Clock className="w-4 h-4 text-icon-gold" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-sm font-urbanist font-semibold text-black mb-1">
+                      <p className="text-sm font-semibold text-black mb-1">
                         {event.time}
                       </p>
-                      <p className="text-sm font-urbanist text-black">
+                      <p className="text-sm text-black">
                         {event.title}
                       </p>
                     </div>

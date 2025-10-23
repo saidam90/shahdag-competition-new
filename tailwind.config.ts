@@ -15,8 +15,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'sans': ['Urbanist', 'sans-serif'],
-        'urbanist': ['Urbanist', 'sans-serif'],
+        'sans': ['Sora', 'sans-serif'],
+        'sora': ['Sora', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -104,7 +104,8 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center">
           <p className="text-sm text-primary-foreground/60">
-            © 2025 Shahdag World Cup. All rights reserved. | March 3-8, 2026
+            © 2025 Shahdag Mountain Resort. All rights reserved. | ISMF European
+            Championship World Cup Shahdag. March 3-8, 2026
           </p>
         </div>
       </div>

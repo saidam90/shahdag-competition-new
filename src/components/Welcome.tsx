@@ -10,7 +10,7 @@ const Welcome = () => {
         {/* Welcome Section */}
         <div className="flex flex-col md:flex-row justify-center gap-12 items-center mb-20 md:mx-10">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-5xl font-bold text-primary leading-[2]">
+            <h2 className="text-3xl md:text-5xl font-bold text-primary">
               Join the Championship
             </h2>
             <p className="text-lg text-foreground leading-relaxed">

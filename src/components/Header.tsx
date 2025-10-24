@@ -81,9 +81,10 @@ const Header = () => {
                 </a>
               ))}
               <Button
-                variant="outline"
+                variant="ghost"
                 onClick={toggleTheme}
                 className="mt-4 justify-start"
+                aria-label="Toggle dark mode"
               >
                 {theme === "light" ? (
                   <>

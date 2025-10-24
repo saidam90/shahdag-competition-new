@@ -7,7 +7,7 @@ import Agenda from "@/components/Agenda";
 // import Prizes from "@/components/Prizes";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
-import { useState } from "react";
+// import { useState } from "react";
 import FAQ from "./FAQ";
 import Accommodation from "./Accommodation";
 import Gear from "./Gear";

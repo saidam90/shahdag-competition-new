@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Welcome from "@/components/Welcome";
+import Gallery from "@/components/Gallery";
+import Video from "@/components/Video";
 import Agenda from "@/components/Agenda";
 // import Prizes from "@/components/Prizes";
 import Location from "@/components/Location";
@@ -22,6 +24,8 @@ const Index = () => {
       <Accommodation />
       <Transportation />
       <Gear />
+      <Video />
+      <Gallery />
       <FAQ />
       <Footer />
     </div>

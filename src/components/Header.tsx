@@ -75,7 +75,7 @@ const Header = () => {
                     handleNavClick(e, link.href);
                     setOpen(false);
                   }}
-                  className="text-lg font-medium text-foreground hover:text-primary transition-colors py-2 px-4 rounded-lg hover:bg-accent"
+                  className="text-lg font-medium text-foreground hover:text-primary transition-colors py-2 px-4 rounded-lg"
                 >
                   {link.label}
                 </a>

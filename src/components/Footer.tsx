@@ -11,8 +11,8 @@ const Footer = () => {
       />
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-primary/90 dark:bg-[hsl(0,0%,16%)]/95" />
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+      <div className="container mx-auto px-4 md:px-4 relative z-10">
+        <div className="grid md:grid-cols-3 gap-8 mb-8 pl-6 md:pl-0">
           <div>
             <h3 className="text-xl font-bold mb-4">
               ISMF European Championship <br />

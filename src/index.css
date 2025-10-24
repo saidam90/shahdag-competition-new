@@ -56,7 +56,7 @@ All colors MUST be HSL.
     --background: 0 0% 12%; /* Dark grey background */
     --foreground: 0 0% 100%; /* Pure white text */
 
-    --card: 0 0% 17%; /* Slightly lighter grey for cards */
+    --card: 0 0% 18%; /* Slightly lighter grey for cards */
     --card-foreground: 0 0% 100%; /* White text on cards */
 
     --popover: 0 0% 16%;
@@ -104,6 +104,7 @@ html {
   color: hsl(0 0% 100%) !important;
 }
 
+/* Keep agenda event text black in dark mode, but make other text-black white */
 .dark .text-black {
   color: hsl(0 0% 100%) !important;
 }
@@ -113,6 +114,56 @@ html {
   color: hsl(0 0% 70%) !important;
 }
 
+.dark .group:hover .group-hover\:text-primary {
+  color: hsl(0 0% 70%) !important;
+}
+
+/* Gold CTA buttons in dark mode */
+.dark .bg-primary {
+  background-color: hsl(45 23% 66%) !important; /* icon-gold */
+  color: hsl(0 0% 100%) !important; /* white text */
+}
+
+.dark .bg-primary:hover,
 .dark .hover\:bg-primary\/90:hover {
+  background-color: hsl(45 23% 50%) !important; /* darker gold */
+  color: hsl(0 0% 100%) !important; /* white text */
+}
+
+/* Make all footer text white in dark mode */
+.dark footer,
+.dark footer * {
+  color: hsl(0 0% 100%) !important;
+}
+
+.dark footer .bg-primary,
+.dark footer .bg-primary * {
+  color: hsl(0 0% 5%) !important; /* Keep dark text on gold buttons */
+}
+
+/* Invert only specific logos in dark mode */
+.dark img[src*="shahdag-logo"],
+.dark img[src*="az-sports-logo"] {
+  filter: brightness(0) invert(1);
+}
+
+/* Theme toggle button styling */
+button[aria-label="Toggle dark mode"]:hover {
+  background-color: hsl(210 25% 96%) !important;
+  color: hsl(220 15% 15%) !important;
+}
+
+button[aria-label="Toggle dark mode"]:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.dark button[aria-label="Toggle dark mode"]:hover {
   background-color: hsl(0 0% 25%) !important;
+  color: hsl(0 0% 100%) !important;
+}
+
+.dark button[aria-label="Toggle dark mode"]:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }

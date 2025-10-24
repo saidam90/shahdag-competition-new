@@ -3,32 +3,32 @@ import footerBg from "@/assets/footer.jpeg";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-primary text-primary-foreground py-12 overflow-hidden">
+    <footer className="relative bg-primary dark:bg-[hsl(0,0%,16%)] text-primary-foreground dark:text-white py-12 overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${footerBg})` }}
       />
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-primary/90" />
+      <div className="absolute inset-0 bg-primary/90 dark:bg-[hsl(0,0%,16%)]/95" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4">
               ISMF European Championship <br />
-              World Cup Shahdag 2025
+              World Cup Shahdag 2026
             </h3>
           </div>
 
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/80">
+            <ul className="space-y-2 text-sm text-primary-foreground/80 dark:text-white">
               <li>
                 <a
-                  href="#welcome"
+                  href="#home"
                   className="hover:text-primary-foreground transition-colors"
                 >
-                  Welcome
+                  Home
                 </a>
               </li>
               <li>
@@ -41,10 +41,10 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#prizes"
+                  href="#accommodation"
                   className="hover:text-primary-foreground transition-colors"
                 >
-                  Prizes
+                  Accommodation
                 </a>
               </li>
               <li>
@@ -55,12 +55,20 @@ const Footer = () => {
                   Location
                 </a>
               </li>
+              <li>
+                <a
+                  href="#gear"
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  Gear
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/80">
+            <h4 className="font-semibold mb-4">Contact us</h4>
+            <ul className="space-y-2 text-sm text-primary-foreground/80 dark:text-white">
               <li className="flex items-center gap-2">
                 <Mountain className="w-4 h-4" />
                 Shahdag Mountain Resort
@@ -102,8 +110,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 pt-8 text-center">
-          <p className="text-sm text-primary-foreground/60">
+        <div className="border-t border-primary-foreground/20 dark:border-white/20 pt-8 text-center">
+          <p className="text-sm text-primary-foreground/60 dark:text-white">
             © 2025 Shahdag Mountain Resort. All rights reserved. | ISMF European
             Championship World Cup Shahdag. March 3-8, 2026
           </p>

@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 15% 15%; /* neutral dark gray instead of blue */
+    --foreground: 220 15% 15%;
 
     --card: 0 0% 100%;
     --card-foreground: 220 15% 15%;
@@ -53,33 +53,35 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 220 15% 10%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 12%; /* Dark grey background */
+    --foreground: 0 0% 100%; /* Pure white text */
 
-    --card: 220 15% 14%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 17%; /* Slightly lighter grey for cards */
+    --card-foreground: 0 0% 100%; /* White text on cards */
 
-    --popover: 220 15% 14%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 16%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 214 88% 29%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 200 85% 70%; /* Light blue for buttons and headings */
+    --primary-foreground: 0 0% 5%; /* Dark text on light blue */
 
-    --secondary: 220 15% 18%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 100%; /* White text */
 
-    --muted: 220 15% 18%;
-    --muted-foreground: 215 20% 70%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 100%; /* White text instead of grey */
 
-    --accent: 200 40% 25%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 0 0% 22%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 60% 40%;
+    --destructive: 0 60% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 10% 22%; /* softer, blends better */
-    --input: 220 10% 22%;
-    --ring: 200 25% 70%;
+    --border: 0 0% 25%; /* Lighter border for visibility */
+    --input: 0 0% 25%;
+    --ring: 200 85% 70%;
+
+    --icon-gold: 45 23% 66%; /* Keep gold color for icons */
   }
 }
 
@@ -95,4 +97,22 @@ All colors MUST be HSL.
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Make headings and text white in dark mode */
+.dark .text-primary {
+  color: hsl(0 0% 100%) !important;
+}
+
+.dark .text-black {
+  color: hsl(0 0% 100%) !important;
+}
+
+/* Light gray hover in dark mode */
+.dark .hover\:text-primary:hover {
+  color: hsl(0 0% 70%) !important;
+}
+
+.dark .hover\:bg-primary\/90:hover {
+  background-color: hsl(0 0% 25%) !important;
 }

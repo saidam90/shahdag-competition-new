@@ -1,10 +1,12 @@
-import { Menu } from "lucide-react";
+import { Menu, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const navLinks = [
     { href: "/#home", label: "Home" },
@@ -28,8 +30,8 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-white/30 py-2">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-end">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-end gap-4">
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <a
@@ -42,6 +44,20 @@ const Header = () => {
             </a>
           ))}
         </nav>
+
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={toggleTheme}
+          className="hidden md:flex"
+          aria-label="Toggle dark mode"
+        >
+          {theme === "light" ? (
+            <Moon className="h-5 w-5" />
+          ) : (
+            <Sun className="h-5 w-5" />
+          )}
+        </Button>
 
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild className="md:hidden">
@@ -64,6 +80,23 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
+              <Button
+                variant="outline"
+                onClick={toggleTheme}
+                className="mt-4 justify-start"
+              >
+                {theme === "light" ? (
+                  <>
+                    <Moon className="h-5 w-5 mr-2" />
+                    Dark Mode
+                  </>
+                ) : (
+                  <>
+                    <Sun className="h-5 w-5 mr-2" />
+                    Light Mode
+                  </>
+                )}
+              </Button>
             </nav>
           </SheetContent>
         </Sheet>

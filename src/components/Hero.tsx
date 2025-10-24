@@ -1,4 +1,4 @@
-import heroImage from "@/assets/hero-bg.jpg";
+import heroImage from "@/assets/hero-bg.gif";
 import ministryLogo from "@/assets/ministry-of-youth-logo.png";
 import azerbaijanLogo from "@/assets/azerbaijan-logo.png";
 import shahdagLogo from "@/assets/shahdag-logo.png";
@@ -47,7 +47,7 @@ const Hero = () => {
           backgroundImage: `url(${heroImage})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/85 to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/85 to-white dark:from-[hsl(0,0%,12%)]/95 dark:via-[hsl(0,0%,12%)]/90 dark:to-[hsl(0,0%,12%)]" />
       </div>
 
       {/* Content */}

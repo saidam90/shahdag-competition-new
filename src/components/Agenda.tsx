@@ -1,4 +1,6 @@
-import { Calendar, Clock } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Calendar, Clock, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "./ui/button";
 
 const agendaData = [
   {
@@ -61,6 +63,40 @@ const agendaData = [
 ];
 
 const Agenda = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  // Auto-scroll effect
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === agendaData.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying]);
+
+  const goToPrevious = () => {
+    setIsAutoPlaying(false);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? agendaData.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setIsAutoPlaying(false);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === agendaData.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const goToSlide = (index: number) => {
+    setIsAutoPlaying(false);
+    setCurrentIndex(index);
+  };
   return (
     <section id="agenda" className="md:py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -76,21 +112,15 @@ const Agenda = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {agendaData.map((dayData, idx) => (
-            <div
-              key={idx}
-              className={`bg-card rounded-xl p-8 shadow-lg hover:shadow-xl transition-all ${
-                idx === agendaData.length - 1 && agendaData.length % 2 !== 0
-                  ? "md:col-span-2 md:w-[600px] md:mx-auto"
-                  : ""
-              }`}
-            >
+        <div className="max-w-3xl mx-auto">
+          {/* Main Agenda Card Display */}
+          <div className="relative mb-6">
+            <div className="bg-card rounded-xl p-8 md:px-20 shadow-lg min-h-[400px]">
               <h3 className="text-2xl font-bold text-primary mb-6 pb-4 border-b border-border">
-                {dayData.day}
+                {agendaData[currentIndex].day}
               </h3>
               <div className="space-y-4">
-                {dayData.events.map((event, eventIdx) => (
+                {agendaData[currentIndex].events.map((event, eventIdx) => (
                   <div key={eventIdx} className="flex gap-4 items-start group">
                     <div className="bg-primary/5 rounded-lg p-2">
                       <Clock className="w-4 h-4 text-icon-gold" />
@@ -105,7 +135,47 @@ const Agenda = () => {
                 ))}
               </div>
             </div>
-          ))}
+
+            {/* Navigation Buttons */}
+            <Button
+              onClick={goToPrevious}
+              variant="ghost"
+              size="icon"
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-[hsl(0,0%,20%)]/80 hover:bg-white dark:hover:bg-[hsl(0,0%,25%)] rounded-full w-10 h-10 md:w-12 md:h-12"
+            >
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+            </Button>
+
+            <Button
+              onClick={goToNext}
+              variant="ghost"
+              size="icon"
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-[hsl(0,0%,20%)]/80 hover:bg-white dark:hover:bg-[hsl(0,0%,25%)] rounded-full w-10 h-10 md:w-12 md:h-12"
+            >
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+            </Button>
+
+            {/* Day Counter */}
+            <div className="absolute bottom-4 right-4 bg-black/60 text-white px-4 py-2 rounded-full text-sm">
+              Day {currentIndex + 1} / {agendaData.length}
+            </div>
+          </div>
+
+          {/* Day Navigation Dots */}
+          <div className="flex justify-center gap-2">
+            {agendaData.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`transition-all rounded-full ${
+                  index === currentIndex
+                    ? "bg-icon-gold w-8 h-3"
+                    : "bg-gray-300 dark:bg-gray-600 w-3 h-3 hover:bg-gray-400 dark:hover:bg-gray-500"
+                }`}
+                aria-label={`Go to day ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

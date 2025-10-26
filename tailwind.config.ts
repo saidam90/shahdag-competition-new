@@ -15,8 +15,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        'sans': ['Sora', 'sans-serif'],
-        'sora': ['Sora', 'sans-serif'],
+        'sans': ['Work Sans', 'sans-serif'],
+        'heading': ['Archivo Black', 'sans-serif'],
+        'body': ['Work Sans', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

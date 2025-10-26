@@ -7,11 +7,9 @@ import Agenda from "@/components/Agenda";
 // import Prizes from "@/components/Prizes";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
-// import { useState } from "react";
 import FAQ from "./FAQ";
 import Accommodation from "./Accommodation";
 import Gear from "./Gear";
-import Transportation from "./Transportation";
 
 const Index = () => {
   return (
@@ -22,7 +20,6 @@ const Index = () => {
       <Location />
       <Agenda />
       <Accommodation />
-      <Transportation />
       <Gear />
       <Video />
       <Gallery />

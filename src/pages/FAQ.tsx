@@ -42,6 +42,31 @@ const FAQ = () => {
       ),
     },
     {
+      question: "How can I get to Shahdag from Baku?",
+      answer: (
+        <>
+          <p className="mb-4">
+            For your convenience, a shuttle bus between Baku and Shahdag is
+            available at a special rate.
+          </p>
+          <p className="mb-4">
+            To reserve a seat, please contact us in advance at{" "}
+            <a
+              href="mailto:info@wintersports.az"
+              className="text-primary hover:underline font-medium"
+            >
+              info@wintersports.az
+            </a>
+            .
+          </p>
+          <p>
+            Enjoy a comfortable journey, allowing you to focus on the upcoming
+            adventure. The schedule will be shared a week prior to the race.
+          </p>
+        </>
+      ),
+    },
+    {
       question: "How can I book accommodation?",
       answer: (
         <p>

@@ -35,6 +35,14 @@ const sponsors = [
 ];
 
 const Hero = () => {
+  const handleScrollDown = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section
       id="home"
@@ -82,7 +90,8 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <a
-        href="#welcome"
+        href="#"
+        onClick={handleScrollDown}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer z-20 hover:opacity-70 transition-opacity"
       >
         <ChevronDown className="w-8 h-8 text-primary" />

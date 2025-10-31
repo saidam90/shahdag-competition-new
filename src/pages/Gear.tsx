@@ -1,5 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { CreditCard, Mountain, Link2, Footprints, Wand2, Layers, HardHat, Hand, Backpack } from "lucide-react";
+import {
+  CreditCard,
+  Mountain,
+  Link2,
+  Footprints,
+  Wand2,
+  Layers,
+  HardHat,
+  Hand,
+  Backpack,
+} from "lucide-react";
 
 const Gear = () => {
   const gearCategories = [
@@ -36,7 +46,7 @@ const Gear = () => {
     <section id="gear" className="py-16 px-4 bg-secondary/30 scroll-mt-20">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-icon-gold rounded-full px-4 py-2 mb-4">
+          <div className="inline-flex items-center gap-2 bg-icon-gold rounded-full px-4 py-2 mb-4 md:mb-8">
             <Mountain className="w-5 h-5 text-white" />
             <span className="text-sm font-semibold text-white">EQUIPMENT</span>
           </div>
@@ -45,8 +55,8 @@ const Gear = () => {
           </h1>
 
           <p className="text-center text-lg text-foreground max-w-2xl mx-auto mb-6">
-            The following equipment is mandatory and ISMF rules will be applied in
-            the competition.
+            The following equipment is mandatory and ISMF rules will be applied
+            in the competition.
           </p>
 
           <a
@@ -77,12 +87,14 @@ const Gear = () => {
                     return (
                       <div
                         key={itemIdx}
-                        className="flex items-center gap-3 p-3 rounded-lg"
+                        className="flex items-center gap-2 rounded-lg"
                       >
                         <div className="w-10 h-10 rounded-full bg-icon-gold/20 flex items-center justify-center">
                           <Icon className="w-5 h-5 text-icon-gold" />
                         </div>
-                        <span className="text-md font-medium text-foreground">{item.name}</span>
+                        <span className="text-md font-medium text-foreground">
+                          {item.name}
+                        </span>
                       </div>
                     );
                   })}

@@ -2,25 +2,11 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 
-// Import all gallery images
-import img1 from "@/assets/gallery/DSC04750.jpg";
-import img2 from "@/assets/gallery/DSC04972.jpg";
-import img3 from "@/assets/gallery/DSC05318.jpg";
-import img4 from "@/assets/gallery/DSC05357.jpg";
-import img5 from "@/assets/gallery/DSC05550.jpg";
-import img6 from "@/assets/gallery/DSC06576.jpg";
-import img7 from "@/assets/gallery/DSC06618.jpg";
-import img8 from "@/assets/gallery/DSC06630.jpg";
-import img9 from "@/assets/gallery/DSC06643.jpg";
-import img10 from "@/assets/gallery/DSC06713.jpg";
-import img11 from "@/assets/gallery/DSC06758.jpg";
-import img12 from "@/assets/gallery/WhatsApp Image 2025-05-08 at 12.09.32 (2).jpeg";
-import img13 from "@/assets/gallery/WhatsApp Image 2025-05-08 at 12.09.34.jpeg";
-
-const galleryImages = [
-  img1, img2, img3, img4, img5, img6, img7,
-  img8, img9, img10, img11, img12, img13
-];
+const images = import.meta.glob("@/assets/gallery/*.webp", {
+  eager: true,
+  import: "default",
+});
+const galleryImages = Object.values(images) as string[];
 
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import {
   CreditCard,
-  Mountain,
   Link2,
   Footprints,
   Wand2,
@@ -9,7 +8,31 @@ import {
   HardHat,
   Hand,
   Backpack,
+  Mountain,
 } from "lucide-react";
+
+// Custom Ski Icon Component
+const SkiIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    {/* Two crossed skis */}
+    <line x1="4" y1="20" x2="20" y2="4" />
+    <line x1="4" y1="4" x2="20" y2="20" />
+    {/* Ski poles */}
+    <line x1="2" y1="22" x2="2" y2="12" />
+    <line x1="22" y1="22" x2="22" y2="12" />
+    {/* Pole grips */}
+    <line x1="1" y1="12" x2="3" y2="12" />
+    <line x1="21" y1="12" x2="23" y2="12" />
+  </svg>
+);
 
 const Gear = () => {
   const gearCategories = [
@@ -17,7 +40,7 @@ const Gear = () => {
       title: "Vertical mandatory equipment",
       items: [
         { name: "Identity", icon: CreditCard },
-        { name: "Ski", icon: Mountain },
+        { name: "Ski", icon: SkiIcon },
         { name: "Binding", icon: Link2 },
         { name: "Boots", icon: Footprints },
         { name: "Batons", icon: Wand2 },
@@ -30,7 +53,7 @@ const Gear = () => {
       title: "Speed racing mandatory equipment",
       items: [
         { name: "Identity", icon: CreditCard },
-        { name: "Ski", icon: Mountain },
+        { name: "Ski", icon: SkiIcon },
         { name: "Binding", icon: Link2 },
         { name: "Boots", icon: Footprints },
         { name: "Batons", icon: Wand2 },

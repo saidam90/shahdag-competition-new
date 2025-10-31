@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Calendar, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -64,37 +64,20 @@ const agendaData = [
 
 const Agenda = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  // Auto-scroll effect
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === agendaData.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 4000); // Change slide every 4 seconds
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying]);
 
   const goToPrevious = () => {
-    setIsAutoPlaying(false);
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? agendaData.length - 1 : prevIndex - 1
     );
   };
 
   const goToNext = () => {
-    setIsAutoPlaying(false);
     setCurrentIndex((prevIndex) =>
       prevIndex === agendaData.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const goToSlide = (index: number) => {
-    setIsAutoPlaying(false);
     setCurrentIndex(index);
   };
   return (

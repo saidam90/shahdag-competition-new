@@ -19,7 +19,7 @@ const raceCategories = [
   {
     id: "sprint",
     title: "Sprint Race",
-    shortTitle: "Sprint",
+    shortTitle: "Sprint Race",
     maps: [sprintRace1, sprintRace2],
   },
   {
@@ -78,7 +78,7 @@ const RaceMaps = () => {
                 <button
                   key={category.id}
                   onClick={() => setActiveTab(index)}
-                  className={`px-4 py-3 font-medium transition-all relative ${
+                  className={`px-4 py-2 font-medium transition-all relative ${
                     activeTab === index
                       ? "text-primary"
                       : "text-muted-foreground hover:text-primary"

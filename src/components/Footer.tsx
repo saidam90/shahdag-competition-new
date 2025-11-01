@@ -1,5 +1,5 @@
 import { MapPin, Mail, Phone, Mountain, Globe } from "lucide-react";
-import footerBg from "@/assets/footer.jpeg";
+import footerBg from "@/assets/footer.webp";
 
 const Footer = () => {
   return (

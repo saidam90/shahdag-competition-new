@@ -1,10 +1,10 @@
 import heroImage from "@/assets/hero-bg.webp";
-import ministryLogo from "@/assets/ministry-of-youth-logo.png";
-import azerbaijanLogo from "@/assets/azerbaijan-logo.png";
-import shahdagLogo from "@/assets/shahdag-logo.png";
-import ismfLogo from "@/assets/ismf-logo.png";
-import azSportsLogo from "@/assets/az-sports-logo.png";
-import pgiLogo from "@/assets/pgi-logo.png";
+import ministryLogo from "@/assets/ministry-of-youth-logo.webp";
+import azerbaijanLogo from "@/assets/azerbaijan-logo.webp";
+import shahdagLogo from "@/assets/shahdag-logo.webp";
+import ismfLogo from "@/assets/ismf-logo.webp";
+import azSportsLogo from "@/assets/az-sports-logo.webp";
+import pgiLogo from "@/assets/pgi-logo.webp";
 import { ChevronDown } from "lucide-react";
 
 const sponsors = [

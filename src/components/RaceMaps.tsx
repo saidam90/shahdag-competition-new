@@ -1,18 +1,18 @@
 import { useState } from "react";
 import sprintRace1 from "@/assets/sprints/Sprint race 1.webp";
 import sprintRace2 from "@/assets/sprints/Sprint race 2.webp";
-import mixedRelay1 from "@/assets/sprints/Mixed relay 1.jpg";
-import mixedRelay2 from "@/assets/sprints/Mixed relay 2.jpg";
-import verticalU18M1 from "@/assets/sprints/Vertical race U18M 1.jpg";
-import verticalU18M2 from "@/assets/sprints/Vertical race U18M 2.jpg";
-import verticalSenior1 from "@/assets/sprints/Vertical race Senior 1.jpg";
-import verticalSenior2 from "@/assets/sprints/Vertical race Senior 2.jpg";
-import individual1 from "@/assets/sprints/Individual 1.jpg";
-import individual2 from "@/assets/sprints/Individual 2.jpg";
-import individualSeniorM1 from "@/assets/sprints/Individual race Senior M 1.jpg";
-import individualSeniorM2 from "@/assets/sprints/Individual race Senior M 2.jpg";
-import individualSeniorW1 from "@/assets/sprints/Individual race Senior W 1.jpg";
-import individualSeniorW2 from "@/assets/sprints/Individual race Senior W 2.jpg";
+import mixedRelay1 from "@/assets/sprints/Mixed relay 1.webp";
+import mixedRelay2 from "@/assets/sprints/Mixed relay 2.webp";
+import verticalU18M1 from "@/assets/sprints/Vertical race U18M 1.webp";
+import verticalU18M2 from "@/assets/sprints/Vertical race U18M 2.webp";
+import verticalSenior1 from "@/assets/sprints/Vertical race Senior 1.webp";
+import verticalSenior2 from "@/assets/sprints/Vertical race Senior 2.webp";
+import individual1 from "@/assets/sprints/Individual 1.webp";
+import individual2 from "@/assets/sprints/Individual 2.webp";
+import individualSeniorM1 from "@/assets/sprints/Individual race Senior M 1.webp";
+import individualSeniorM2 from "@/assets/sprints/Individual race Senior M 2.webp";
+import individualSeniorW1 from "@/assets/sprints/Individual race Senior W 1.webp";
+import individualSeniorW2 from "@/assets/sprints/Individual race Senior W 2.webp";
 
 // Define race categories with their maps
 const raceCategories = [

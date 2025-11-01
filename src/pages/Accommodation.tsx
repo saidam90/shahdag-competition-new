@@ -100,6 +100,7 @@ const Accommodation = () => {
                   src={option.image}
                   alt={`${option.title} accommodation`}
                   className="w-full h-64 md:h-72 object-cover"
+                  loading="lazy"
                 />
               </div>
 

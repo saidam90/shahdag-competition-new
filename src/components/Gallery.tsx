@@ -58,6 +58,7 @@ const Gallery = () => {
               src={galleryImages[currentIndex]}
               alt={`Gallery image ${currentIndex + 1}`}
               className="w-full h-[400px] md:h-[600px] object-cover"
+              loading="lazy"
             />
 
             {/* Navigation Buttons */}

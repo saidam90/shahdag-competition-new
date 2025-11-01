@@ -36,6 +36,7 @@ const Welcome = () => {
                 src={thrillImage}
                 alt="Join the thrill"
                 className="w-full h-64 object-cover rounded-sm group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
               />
             </div>
             <div className="p-8">
@@ -55,6 +56,7 @@ const Welcome = () => {
                 src={gloryImage}
                 alt="Compete for glory"
                 className="w-full h-64 object-cover rounded-sm group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
               />
             </div>
             <div className="p-8">
@@ -74,6 +76,7 @@ const Welcome = () => {
                 src={awardsImage}
                 alt="Reap the rewards"
                 className="w-full h-64 object-cover rounded-sm group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
               />
             </div>
             <div className="p-8">

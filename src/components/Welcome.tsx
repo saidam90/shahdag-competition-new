@@ -1,7 +1,7 @@
 import winnersImage from "@/assets/winners.webp";
 import thrillImage from "@/assets/thrill.webp";
 import gloryImage from "@/assets/glory.webp";
-import awardsImage from "@/assets/awards.jpg";
+import awardsImage from "@/assets/awards.webp";
 
 const Welcome = () => {
   return (

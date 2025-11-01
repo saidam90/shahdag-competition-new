@@ -1,6 +1,6 @@
 import { useState } from "react";
-import sprintRace1 from "@/assets/sprints/Sprint race 1.png";
-import sprintRace2 from "@/assets/sprints/Sprint race 2.png";
+import sprintRace1 from "@/assets/sprints/Sprint race 1.webp";
+import sprintRace2 from "@/assets/sprints/Sprint race 2.webp";
 import mixedRelay1 from "@/assets/sprints/Mixed relay 1.jpg";
 import mixedRelay2 from "@/assets/sprints/Mixed relay 2.jpg";
 import verticalU18M1 from "@/assets/sprints/Vertical race U18M 1.jpg";

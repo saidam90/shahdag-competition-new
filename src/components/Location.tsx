@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MapPin, Download, ZoomIn, ZoomOut, Maximize2 } from "lucide-react";
-import shahdagMap from "@/assets/shahdag-map.png";
+import shahdagMap from "@/assets/shahdag-map.webp";
 import { Button } from "@/components/ui/button";
 
 const Location = () => {

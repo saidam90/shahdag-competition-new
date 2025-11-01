@@ -1,4 +1,4 @@
-import heroImage from "@/assets/hero-bg.gif";
+import heroImage from "@/assets/hero-bg.webp";
 import ministryLogo from "@/assets/ministry-of-youth-logo.png";
 import azerbaijanLogo from "@/assets/azerbaijan-logo.png";
 import shahdagLogo from "@/assets/shahdag-logo.png";

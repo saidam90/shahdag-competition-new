@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import hotelRoomImage from "@/assets/hotel-room.jpg";
-import apartmentRoomImage from "@/assets/apartment-room.jpg";
-import budgetRoomImage from "@/assets/budget-room.jpg";
+import hotelRoomImage from "@/assets/hotel-room.webp";
+import apartmentRoomImage from "@/assets/apartment-room.webp";
+import budgetRoomImage from "@/assets/budget-room.webp";
 
 const Accommodation = () => {
   const accommodationOptions = [

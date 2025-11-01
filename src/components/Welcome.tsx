@@ -1,7 +1,15 @@
 import winnersImage from "@/assets/winners.webp";
+import winnersImageMedium from "@/assets/winners-medium.webp";
+import winnersImageSmall from "@/assets/winners-small.webp";
 import thrillImage from "@/assets/thrill.webp";
+import thrillImageMedium from "@/assets/thrill-medium.webp";
+import thrillImageSmall from "@/assets/thrill-small.webp";
 import gloryImage from "@/assets/glory.webp";
+import gloryImageMedium from "@/assets/glory-medium.webp";
+import gloryImageSmall from "@/assets/glory-small.webp";
 import awardsImage from "@/assets/awards.webp";
+import awardsImageMedium from "@/assets/awards-medium.webp";
+import awardsImageSmall from "@/assets/awards-small.webp";
 
 const Welcome = () => {
   return (
@@ -21,6 +29,8 @@ const Welcome = () => {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-2xl w-full md:w-auto animate-fade-in-right hover:scale-105 transition-transform duration-500">
             <img
+              srcSet={`${winnersImageSmall} 800w, ${winnersImageMedium} 1200w, ${winnersImage} 3000w`}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 800px, 1200px"
               src={winnersImage}
               alt="Ski mountaineering competition"
               className="w-full md:w-[1500px] h-full object-contain"
@@ -33,6 +43,8 @@ const Welcome = () => {
           <div className="bg-card rounded-xl overflow-hidden text-center group hover:shadow-2xl transition-all duration-300 animate-fade-in-up animation-delay-100">
             <div className="overflow-hidden">
               <img
+                srcSet={`${thrillImageSmall} 800w, ${thrillImageMedium} 1200w, ${thrillImage} 2343w`}
+                sizes="(max-width: 768px) 100vw, 766px"
                 src={thrillImage}
                 alt="Join the thrill"
                 className="w-full h-64 object-cover rounded-sm group-hover:scale-110 transition-transform duration-500"
@@ -53,6 +65,8 @@ const Welcome = () => {
           <div className="bg-card rounded-xl overflow-hidden text-center group hover:shadow-2xl transition-all duration-300 animate-fade-in-up animation-delay-200">
             <div className="overflow-hidden">
               <img
+                srcSet={`${gloryImageSmall} 800w, ${gloryImageMedium} 1200w, ${gloryImage} 2342w`}
+                sizes="(max-width: 768px) 100vw, 766px"
                 src={gloryImage}
                 alt="Compete for glory"
                 className="w-full h-64 object-cover rounded-sm group-hover:scale-110 transition-transform duration-500"
@@ -73,6 +87,8 @@ const Welcome = () => {
           <div className="bg-card rounded-xl overflow-hidden text-center group hover:shadow-2xl transition-all duration-300 animate-fade-in-up animation-delay-300">
             <div className="overflow-hidden">
               <img
+                srcSet={`${awardsImageSmall} 800w, ${awardsImageMedium} 1200w, ${awardsImage} 2343w`}
+                sizes="(max-width: 768px) 100vw, 766px"
                 src={awardsImage}
                 alt="Reap the rewards"
                 className="w-full h-64 object-cover rounded-sm group-hover:scale-110 transition-transform duration-500"

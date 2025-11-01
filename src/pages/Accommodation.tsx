@@ -1,13 +1,21 @@
 import { Button } from "@/components/ui/button";
 import hotelRoomImage from "@/assets/hotel-room.webp";
+import hotelRoomImageMedium from "@/assets/hotel-room-medium.webp";
+import hotelRoomImageSmall from "@/assets/hotel-room-small.webp";
 import apartmentRoomImage from "@/assets/apartment-room.webp";
+import apartmentRoomImageMedium from "@/assets/apartment-room-medium.webp";
+import apartmentRoomImageSmall from "@/assets/apartment-room-small.webp";
 import budgetRoomImage from "@/assets/budget-room.webp";
+import budgetRoomImageMedium from "@/assets/budget-room-medium.webp";
+import budgetRoomImageSmall from "@/assets/budget-room-small.webp";
 
 const Accommodation = () => {
   const accommodationOptions = [
     {
       title: "Hotel",
       image: hotelRoomImage,
+      imageMedium: hotelRoomImageMedium,
+      imageSmall: hotelRoomImageSmall,
       rates: [
         {
           type: "Fullboard (includes all meals):",
@@ -32,6 +40,8 @@ const Accommodation = () => {
     {
       title: "Apartment",
       image: apartmentRoomImage,
+      imageMedium: apartmentRoomImageMedium,
+      imageSmall: apartmentRoomImageSmall,
       rates: [
         {
           type: "Fullboard (includes all meals):",
@@ -54,6 +64,8 @@ const Accommodation = () => {
     {
       title: "Budget accommodation",
       image: budgetRoomImage,
+      imageMedium: budgetRoomImageMedium,
+      imageSmall: budgetRoomImageSmall,
       rates: [
         {
           type: "Full board (includes all meals):",
@@ -97,6 +109,8 @@ const Accommodation = () => {
             >
               <div className="overflow-hidden">
                 <img
+                  srcSet={`${option.imageSmall} 800w, ${option.imageMedium} 1200w, ${option.image} 1600w`}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 400px, 500px"
                   src={option.image}
                   alt={`${option.title} accommodation`}
                   className="w-full h-64 md:h-72 object-cover"

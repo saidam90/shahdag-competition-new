@@ -54,6 +54,29 @@ const Location = () => {
     }
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (scale > 1 && e.touches.length === 1) {
+      setIsDragging(true);
+      setDragStart({
+        x: e.touches[0].clientX - position.x,
+        y: e.touches[0].clientY - position.y,
+      });
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (isDragging && scale > 1 && e.touches.length === 1) {
+      setPosition({
+        x: e.touches[0].clientX - dragStart.x,
+        y: e.touches[0].clientY - dragStart.y,
+      });
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
   return (
     <section id="location" className="">
       <div className="container mx-auto px-4">
@@ -107,9 +130,8 @@ const Location = () => {
 
             {/* Interactive Map Container */}
             <div
-              className="relative overflow-hidden rounded-xl border-2 border-border bg-muted mx-auto"
+              className="relative overflow-hidden rounded-xl border-2 border-border bg-muted mx-auto h-[280px] md:h-[550px]"
               style={{
-                height: "700px",
                 maxWidth: "780px",
                 cursor:
                   scale > 1 ? (isDragging ? "grabbing" : "grab") : "default",
@@ -119,6 +141,9 @@ const Location = () => {
               onMouseUp={handleMouseUp}
               onMouseLeave={handleMouseUp}
               onWheel={handleWheel}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
             >
               <img
                 src={shahdagMap}
@@ -127,8 +152,8 @@ const Location = () => {
                 style={{
                   transform: `translate(-50%, -50%) translate(${position.x}px, ${position.y}px) scale(${scale})`,
                   maxWidth: "none",
-                  height: "700px",
-                  width: "auto",
+                  width: "100%",
+                  height: "auto",
                 }}
                 draggable={false}
               />

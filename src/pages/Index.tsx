@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Welcome from "@/components/Welcome";
 import Gallery from "@/components/Gallery";
-import Video from "@/components/Video";
+// import Video from "@/components/Video";
 import Agenda from "@/components/Agenda";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
@@ -22,7 +22,7 @@ const Index = () => {
       <RaceMaps />
       <Accommodation />
       <Gear />
-      <Video />
+      {/* <Video /> */}
       <Gallery />
       <FAQ />
       <Footer />

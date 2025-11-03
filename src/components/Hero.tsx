@@ -13,20 +13,20 @@ const sponsors = [
     logo: ismfLogo,
   },
   {
-    name: "Shahdag",
-    logo: shahdagLogo,
-  },
-  {
-    name: "PGI",
-    logo: pgiLogo,
+    name: "Ministry",
+    logo: ministryLogo,
   },
   {
     name: "Azerbaijan Winter Sports",
     logo: azSportsLogo,
   },
   {
-    name: "Ministry",
-    logo: ministryLogo,
+    name: "Shahdag",
+    logo: shahdagLogo,
+  },
+  {
+    name: "PGI",
+    logo: pgiLogo,
   },
   {
     name: "Azerbaijan Olympic",

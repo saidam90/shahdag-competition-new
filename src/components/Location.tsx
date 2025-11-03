@@ -8,6 +8,8 @@ const Location = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [initialPinchDistance, setInitialPinchDistance] = useState<number | null>(null);
+  const [initialPinchScale, setInitialPinchScale] = useState(1);
 
   const handleZoomIn = () => {
     setScale((prev) => Math.min(prev + 0.25, 3));
@@ -52,6 +54,12 @@ const Location = () => {
     }
   };
 
+  const getPinchDistance = (touches: React.TouchList) => {
+    const dx = touches[0].clientX - touches[1].clientX;
+    const dy = touches[0].clientY - touches[1].clientY;
+    return Math.sqrt(dx * dx + dy * dy);
+  };
+
   const handleTouchStart = (e: React.TouchEvent) => {
     if (e.touches.length === 1) {
       e.preventDefault();
@@ -60,6 +68,12 @@ const Location = () => {
         x: e.touches[0].clientX - position.x,
         y: e.touches[0].clientY - position.y,
       });
+    } else if (e.touches.length === 2) {
+      e.preventDefault();
+      setIsDragging(false);
+      const distance = getPinchDistance(e.touches);
+      setInitialPinchDistance(distance);
+      setInitialPinchScale(scale);
     }
   };
 
@@ -70,11 +84,18 @@ const Location = () => {
         x: e.touches[0].clientX - dragStart.x,
         y: e.touches[0].clientY - dragStart.y,
       });
+    } else if (e.touches.length === 2 && initialPinchDistance) {
+      e.preventDefault();
+      const distance = getPinchDistance(e.touches);
+      const scaleChange = distance / initialPinchDistance;
+      const newScale = Math.max(1, Math.min(3, initialPinchScale * scaleChange));
+      setScale(newScale);
     }
   };
 
   const handleTouchEnd = () => {
     setIsDragging(false);
+    setInitialPinchDistance(null);
   };
 
   return (
@@ -159,7 +180,7 @@ const Location = () => {
             </div>
 
             <p className="text-sm text-muted-foreground mt-4">
-              Drag to pan • Click zoom buttons or scroll to zoom
+              Drag to pan • Pinch to zoom • Click zoom buttons or scroll to zoom
             </p>
           </div>
 

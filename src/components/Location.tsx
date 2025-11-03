@@ -61,15 +61,14 @@ const Location = () => {
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
+    e.preventDefault();
     if (e.touches.length === 1) {
-      e.preventDefault();
       setIsDragging(true);
       setDragStart({
         x: e.touches[0].clientX - position.x,
         y: e.touches[0].clientY - position.y,
       });
     } else if (e.touches.length === 2) {
-      e.preventDefault();
       setIsDragging(false);
       const distance = getPinchDistance(e.touches);
       setInitialPinchDistance(distance);
@@ -78,14 +77,15 @@ const Location = () => {
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+
     if (e.touches.length === 1 && isDragging) {
-      e.preventDefault();
       setPosition({
         x: e.touches[0].clientX - dragStart.x,
         y: e.touches[0].clientY - dragStart.y,
       });
     } else if (e.touches.length === 2 && initialPinchDistance) {
-      e.preventDefault();
       const distance = getPinchDistance(e.touches);
       const scaleChange = distance / initialPinchDistance;
       const newScale = Math.max(1, Math.min(3, initialPinchScale * scaleChange));
@@ -168,12 +168,13 @@ const Location = () => {
               <img
                 src={shahdagMap}
                 alt="Shahdag Mountain Resort Map"
-                className="absolute top-1/2 left-1/2 select-none transition-transform duration-200"
+                className="absolute top-1/2 left-1/2 select-none"
                 style={{
                   transform: `translate(-50%, -50%) translate(${position.x}px, ${position.y}px) scale(${scale})`,
                   maxWidth: "none",
                   width: "100%",
                   height: "auto",
+                  transition: isDragging ? "none" : "transform 0.1s ease-out",
                 }}
                 draggable={false}
               />

@@ -4,6 +4,16 @@ import { Button } from "./ui/button";
 
 const agendaData = [
   {
+    day: "Tuesday, March 3 - Opening Championship",
+    location: "",
+    events: [
+      { time: "18:00", title: "Captain meeting: Sprint/Mixed relay" },
+      { time: "18:30", title: "Sprint race bibs distribution" },
+      { time: "TBC", title: "Opening Ceremony" },
+      { time: "TBC", title: "Dinner" },
+    ],
+  },
+  {
     day: "Wednesday, March 4 - Sprint Race",
     location: "📍Shahdag Stadium",
     events: [

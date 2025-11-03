@@ -26,14 +26,12 @@ const Location = () => {
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
-    if (scale > 1) {
-      setIsDragging(true);
-      setDragStart({ x: e.clientX - position.x, y: e.clientY - position.y });
-    }
+    setIsDragging(true);
+    setDragStart({ x: e.clientX - position.x, y: e.clientY - position.y });
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (isDragging && scale > 1) {
+    if (isDragging) {
       setPosition({
         x: e.clientX - dragStart.x,
         y: e.clientY - dragStart.y,
@@ -55,7 +53,7 @@ const Location = () => {
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    if (scale > 1 && e.touches.length === 1) {
+    if (e.touches.length === 1) {
       e.preventDefault();
       setIsDragging(true);
       setDragStart({
@@ -66,7 +64,7 @@ const Location = () => {
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    if (isDragging && scale > 1 && e.touches.length === 1) {
+    if (e.touches.length === 1 && isDragging) {
       e.preventDefault();
       setPosition({
         x: e.touches[0].clientX - dragStart.x,
@@ -132,12 +130,10 @@ const Location = () => {
 
             {/* Interactive Map Container */}
             <div
-              className="relative overflow-hidden rounded-xl border-2 border-border bg-muted mx-auto h-[280px] md:h-[550px] touch-none"
+              className="relative overflow-hidden rounded-xl border-2 border-border bg-muted mx-auto h-[280px] md:h-[550px] touch-none select-none"
               style={{
                 maxWidth: "780px",
-                cursor:
-                  scale > 1 ? (isDragging ? "grabbing" : "grab") : "default",
-                touchAction: "none",
+                cursor: isDragging ? "grabbing" : "grab",
               }}
               onMouseDown={handleMouseDown}
               onMouseMove={handleMouseMove}
@@ -163,9 +159,7 @@ const Location = () => {
             </div>
 
             <p className="text-sm text-muted-foreground mt-4">
-              {scale > 1
-                ? "Click and drag to pan • Scroll to zoom"
-                : "Click zoom buttons or scroll to zoom in"}
+              Drag to pan • Click zoom buttons or scroll to zoom
             </p>
           </div>
 

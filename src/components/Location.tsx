@@ -172,7 +172,7 @@ const Location = () => {
               className="bg-primary hover:bg-primary/90"
               asChild
             >
-              <a href={shahdagMap} download="shahdag-map.png">
+              <a href={shahdagMap} download="shahdag-map.webp">
                 <Download className="w-5 h-5 mr-2" />
                 Download Map
               </a>

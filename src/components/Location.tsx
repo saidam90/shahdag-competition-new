@@ -186,7 +186,7 @@ const Location = () => {
             </div>
 
             <p className="text-sm text-muted-foreground mt-2 md:mt-4">
-              Drag to pan • Pinch to zoom • Click zoom buttons or scroll to zoom
+              Drag to pan • Pinch to zoom
             </p>
           </div>
 

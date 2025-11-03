@@ -22,7 +22,7 @@ const Welcome = () => {
               Join the Championship
             </h2>
             <p className="text-lg text-foreground leading-relaxed">
-              Join us for the ISMF European Championship - five days of
+              Join us for the ISMF European Championship - six days of
               excitement, competition, and camaraderie surrounded by the
               breathtaking beauty of Shahdag.
             </p>

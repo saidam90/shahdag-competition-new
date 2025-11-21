@@ -57,6 +57,14 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="#transportation"
+                  className="hover:text-primary-foreground transition-colors"
+                >
+                  Travel
+                </a>
+              </li>
+              <li>
+                <a
                   href="#location"
                   className="hover:text-primary-foreground transition-colors"
                 >

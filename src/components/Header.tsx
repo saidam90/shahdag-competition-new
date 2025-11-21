@@ -13,6 +13,7 @@ const Header = () => {
     { href: "/#agenda", label: "Agenda" },
     { href: "/#race-maps", label: "Race Maps" },
     { href: "/#accommodation", label: "Accommodation" },
+    { href: "/#transportation", label: "Travel" },
     { href: "/#gear", label: "Gear" },
     { href: "/#faq", label: "FAQ" },
   ];

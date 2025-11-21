@@ -10,6 +10,7 @@ import FAQ from "./FAQ";
 import Accommodation from "./Accommodation";
 import Gear from "./Gear";
 import RaceMaps from "@/components/RaceMaps";
+import Transportation from "./Transportation";
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
       <Agenda />
       <RaceMaps />
       <Accommodation />
+      <Transportation />
       <Gear />
       {/* <Video /> */}
       <Gallery />

@@ -37,7 +37,7 @@ const Transportation = () => {
                 </a>{" "}
                 and enjoy a <span className="font-semibold">30% discount</span>{" "}
                 using the promo code{" "}
-                <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded font-mono font-bold">
+                <span className="inline-block bg-primary/10 text-primary px-2 py-0.5 rounded font-mono font-bold">
                   AZALWINTER2026
                 </span>
                 .

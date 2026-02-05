@@ -12,11 +12,11 @@ const Transportation = () => {
         </h1>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="rounded-2xl overflow-hidden shadow-lg">
+          <div className="rounded-2xl overflow-hidden shadow-lg h-[300px] md:h-[500px]">
             <img
               src={transportationImage}
               alt="Winter transportation with snow tires"
-              className="w-full h-auto"
+              className="w-full h-full object-cover"
             />
           </div>
 
@@ -46,14 +46,50 @@ const Transportation = () => {
 
             <div className="border-t border-border pt-6">
               <h2 className="text-2xl font-bold text-primary mb-3">
+                Transfer Service
+              </h2>
+              <p className="text-lg mb-2">
+                <span className="font-semibold">
+                  Baku Airport – Shahdag Ski Resort – Baku Airport
+                </span>
+              </p>
+              <p className="text-lg mb-2">
+                Alpha X Sports Events Marketing L.L.C is the company authorized
+                by the Azerbaijan Winter Sports Federation for ISMF European
+                Championships | ISMF World Cup 2026 as Official Transfer
+                Operator and Accreditation Supplier.
+              </p>
+              <p className="text-lg mb-2">
+                Book your transfer through{" "}
+                <a
+                  href="https://events.alphaxsports.ae/event/5/transfer-service-baku-airport-shahdag-ski-resort-baku-airport"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline font-semibold"
+                >
+                  this link
+                </a>
+                .
+              </p>
+              <p className="text-lg">
+                For questions, please contact{" "}
+                <a
+                  href="mailto:baku@alphaxsports.ae"
+                  className="text-primary hover:underline font-medium"
+                >
+                  baku@alphaxsports.ae
+                </a>
+                .
+              </p>
+            </div>
+
+            {/* <div className="border-t border-border pt-6">
+              <h2 className="text-2xl font-bold text-primary mb-3">
                 Shuttle Bus
               </h2>
               <p className="text-lg mb-2">
-                For your convenience,{" "}
-                <span className="font-semibold">
-                  a shuttle bus between Baku and Shahdag is available at a
-                  special rate.
-                </span>
+                For your convenience, a shuttle bus between Baku and Shahdag is
+                available at a special rate.
               </p>
               <p className="text-lg mb-2">
                 To reserve a seat, please contact us in advance at{" "}
@@ -70,7 +106,7 @@ const Transportation = () => {
                 upcoming adventure. The schedule will be shared a week prior to
                 the race.
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

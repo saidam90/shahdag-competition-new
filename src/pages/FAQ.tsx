@@ -16,7 +16,7 @@ const FAQ = () => {
             You can check whether you need a visa to Azerbaijan based on your
             country by visiting{" "}
             <a
-              href="https://www.evisa.gov.az/en/check-visa-requirement"
+              href="https://evisa.gov.az/en/countries"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline font-medium"

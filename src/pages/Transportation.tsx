@@ -50,7 +50,7 @@ const Transportation = () => {
               </h2>
               <p className="text-lg mb-2">
                 <span className="font-semibold">
-                  Baku Airport – Shahdag Ski Resort – Baku Airport
+                  Baku Airport – Shahdag Mountain Resort – Baku Airport
                 </span>
               </p>
               <p className="text-lg mb-2">

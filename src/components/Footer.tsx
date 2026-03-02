@@ -31,14 +31,14 @@ const Footer = () => {
                   Home
                 </a>
               </li>
-              {/* <li>
+              <li>
                 <a
                   href="#agenda"
                   className="hover:text-primary-foreground transition-colors"
                 >
                   Agenda
                 </a>
-              </li> */}
+              </li>
               <li>
                 <a
                   href="#race-maps"

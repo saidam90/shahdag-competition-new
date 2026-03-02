@@ -88,8 +88,8 @@ const agendaData = [
       },
       { time: "11:30", title: "Seniors, U23 Men Start" },
       { time: "12:00 - 12:10", title: "Flower Ceremony, 📍Top gondola 5" },
-      { time: "17:00", title: "Awards Ceremony" },
-      { time: "TBC", title: "Closing Ceremony" },
+      { time: "14:00", title: "Awards Ceremony" },
+      { time: "19:00", title: "Gala Dinner" },
     ],
   },
 ];
@@ -99,13 +99,13 @@ const Agenda = () => {
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? agendaData.length - 1 : prevIndex - 1
+      prevIndex === 0 ? agendaData.length - 1 : prevIndex - 1,
     );
   };
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === agendaData.length - 1 ? 0 : prevIndex + 1
+      prevIndex === agendaData.length - 1 ? 0 : prevIndex + 1,
     );
   };
 

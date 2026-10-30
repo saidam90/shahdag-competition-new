@@ -27,6 +27,7 @@ const sponsors = [
   {
     name: "PGI",
     logo: pgiLogo,
+    className: "dark:invert",
   },
   {
     name: "Azerbaijan Olympic",
@@ -67,7 +68,7 @@ const Hero = () => {
               <img
                 src={sponsor.logo}
                 alt={sponsor.name}
-                className="h-10 md:h-16 w-auto object-contain"
+                className={`h-10 md:h-16 w-auto object-contain ${sponsor.className ?? ""}`}
               />
             </div>
           ))}

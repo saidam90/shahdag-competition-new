@@ -15,8 +15,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8 pl-6 md:pl-0">
           <div>
             <h3 className="text-xl font-bold mb-4">
-              ISMF European Championship <br />
-              World Cup Shahdag 2026
+              ISMF World Championships <br />
+              Shahdag 2027
             </h3>
           </div>
 
@@ -31,14 +31,14 @@ const Footer = () => {
                   Home
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#agenda"
                   className="hover:text-primary-foreground transition-colors"
                 >
                   Agenda
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="#race-maps"
@@ -128,8 +128,8 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 dark:border-white/20 pt-8 text-center">
           <p className="text-sm text-primary-foreground/60 dark:text-white">
-            © 2025 Shahdag Mountain Resort. All rights reserved. | ISMF European
-            Championship World Cup Shahdag. March 3-8, 2026
+            © 2025 Shahdag Mountain Resort. All rights reserved. | ISMF World
+            Championships Shahdag. 11-18 March 2027
           </p>
         </div>
       </div>

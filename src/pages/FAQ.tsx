@@ -107,6 +107,22 @@ const FAQ = () => {
         </>
       ),
     },
+    {
+      question: "What are the guidelines for media?",
+      answer: (
+        <>
+          <p className="mb-4">
+            Please submit your accreditation application at least 30 working
+            days before your trip.
+          </p>
+          <p>
+            Media accreditation does not cover drone use or filming at specific
+            locations, so these need a separate application. Drone approval can
+            take up to two months, so please apply early.
+          </p>
+        </>
+      ),
+    },
   ];
 
   return (

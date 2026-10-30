@@ -10,11 +10,12 @@ const Header = () => {
 
   const navLinks = [
     { href: "/#home", label: "Home" },
-    { href: "/#agenda", label: "Agenda" },
+    // { href: "/#agenda", label: "Agenda" },
     { href: "/#race-maps", label: "Race Maps" },
     { href: "/#accommodation", label: "Accommodation" },
     { href: "/#transportation", label: "Travel" },
     { href: "/#gear", label: "Gear" },
+    { href: "/#media", label: "Media" },
     { href: "/#faq", label: "FAQ" },
   ];
 

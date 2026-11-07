@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>ISMF World Championships Shahdag 2027</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/auth/auth.css" />
+  </head>
+  <body>
+    <main class="maintenance">
+      <img class="logo" src="/auth/shahdag-logo.webp" alt="Shahdag" />
+      <h1>Under Maintenance</h1>
+      <p class="intro">
+        We're preparing the website for the ISMF World Championships Shahdag
+        2027. Please check back soon.
+      </p>
+
+      <section class="guest" aria-labelledby="guest-heading">
+        <h2 id="guest-heading">Invited guests</h2>
+        <p class="error" id="error" role="alert" hidden></p>
+        <form method="post" action="/api/login">
+          <input type="hidden" name="next" value="/" />
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Password
+            <input
+              type="password"
+              name="password"
+              autocomplete="current-password"
+              required
+            />
+          </label>
+          <button type="submit">Sign in</button>
+        </form>
+        <p class="footer">
+          First time here? <a href="/set-password">Set your password</a>
+        </p>
+      </section>
+    </main>
+    <script src="/auth/auth.js"></script>
+  </body>
+</html>

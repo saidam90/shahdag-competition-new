@@ -7,13 +7,25 @@ import { createSign } from "node:crypto";
  *   A: Email   B: Password Hash   (C onwards: anything, e.g. Name — ignored)
  *
  * Column B starts empty; /set-password fills it in. Clearing it lets the
- * person choose a new password; deleting the row removes their access.
+ * person choose a new password; deleting the row removes their access
+ * (unless their email domain is in ALLOWED_DOMAINS, in which case they can
+ * simply register again).
+ *
+ * Anyone at an ALLOWED_DOMAINS address can register without being listed;
+ * /set-password adds their row. Nothing checks that they own the mailbox.
  *
  * Read through a Google Cloud service account, which the sheet must be
  * shared with as an Editor.
  */
 
 const TAB = process.env.GOOGLE_SHEET_TAB || "Users";
+
+/** Whole email domains allowed in, on top of the addresses in the sheet. */
+export const ALLOWED_DOMAINS = ["shahdag.az", "tourismboard.az"];
+
+export function isAllowedDomain(email: string): boolean {
+  return ALLOWED_DOMAINS.some((domain) => email.endsWith(`@${domain}`));
+}
 
 export interface SheetUser {
   email: string;
@@ -104,6 +116,23 @@ export async function findSheetUser(email: string): Promise<SheetUser | null> {
   if (index === -1) return null;
   const hash = cell(values[index][1]);
   return { email, row: index + 2, passwordHash: hash || null };
+}
+
+/**
+ * Adds a row for someone who isn't listed but whose email domain is
+ * allowed (see ALLOWED_DOMAINS), so their password has somewhere to live.
+ */
+export async function appendSheetUser(email: string, passwordHash: string) {
+  await sheetsRequest(
+    "A:D",
+    {
+      method: "POST",
+      body: JSON.stringify({
+        values: [[email, passwordHash, "", "Registered via email domain"]],
+      }),
+    },
+    ":append?valueInputOption=RAW&insertDataOption=INSERT_ROWS",
+  );
 }
 
 /**

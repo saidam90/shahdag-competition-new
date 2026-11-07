@@ -85,12 +85,16 @@ headers, then one person per row:
 | ----------------- | ---------------- | ------------------- |
 | anna@example.com  | *(leave empty)*  | Anna, ISMF          |
 
-- **Invite someone:** add their email in column A, leave B empty. They go to
-  `/set-password`, pick a password, and are signed in.
+- **Anyone @shahdag.az or @tourismboard.az** can go to `/set-password` and
+  register without being listed; the site adds their row. Nothing checks they
+  own the mailbox. The domains are `ALLOWED_DOMAINS` in `lib/sheets.ts`.
+- **Invite someone else:** add their email in column A, leave B empty. They go
+  to `/set-password`, pick a password, and are signed in.
 - **Reset a forgotten password:** clear their cell in column B; they set a new
   one at `/set-password`. That page only works for an email with no password
   yet, so nobody can take over someone else's account.
-- **Remove someone:** delete their row. A sign-in they already have lasts
+- **Remove someone:** delete their row (someone at an allowed domain can
+  register again, so for them change the domains instead). A sign-in they already have lasts
   until it expires (30 days); change `SESSION_SECRET` to sign everyone out now.
 - **Sign out:** visit `/api/logout`.
 

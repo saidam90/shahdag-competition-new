@@ -7,7 +7,9 @@ import {
   sessionCookie,
 } from "../lib/session.js";
 import {
+  appendSheetUser,
   findSheetUser,
+  isAllowedDomain,
   isSheetConfigured,
   setSheetPassword,
   type SheetUser,
@@ -34,21 +36,24 @@ export async function POST(request: Request): Promise<Response> {
     return back("unavailable");
   }
 
-  if (!user) return back("not-listed");
+  if (!user && !isAllowedDomain(email)) return back("not-listed");
 
   // First claim only. If an existing password could be replaced here,
   // anyone who knew a listed address could take over that account;
   // a reset goes through the admin clearing the cell instead.
-  if (user.passwordHash) return back("already-set");
+  if (user?.passwordHash) return back("already-set");
 
   try {
-    await setSheetPassword(user, await hashPassword(password));
+    const hash = await hashPassword(password);
+    // Not listed but at an allowed domain: they get a new row.
+    if (user) await setSheetPassword(user, hash);
+    else await appendSheetUser(email, hash);
   } catch (err) {
     console.error("Saving password failed", err);
     return back("unavailable");
   }
 
-  const token = await createSessionToken(user.email);
+  const token = await createSessionToken(email);
   if (!token) {
     console.error("SESSION_SECRET is missing or shorter than 32 characters");
     return back("config");

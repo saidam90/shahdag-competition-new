@@ -21,7 +21,7 @@ import { createSign } from "node:crypto";
 const TAB = process.env.GOOGLE_SHEET_TAB || "Users";
 
 /** Whole email domains allowed in, on top of the addresses in the sheet. */
-export const ALLOWED_DOMAINS = ["shahdag.az", "tourismboard.az"];
+export const ALLOWED_DOMAINS = ["shahdag.az", "tourismboard.az", "pgi.ad"];
 
 export function isAllowedDomain(email: string): boolean {
   return ALLOWED_DOMAINS.some((domain) => email.endsWith(`@${domain}`));

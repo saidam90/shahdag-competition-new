@@ -85,7 +85,7 @@ headers, then one person per row:
 | ----------------- | ---------------- | ------------------- |
 | anna@example.com  | *(leave empty)*  | Anna, ISMF          |
 
-- **Anyone @shahdag.az or @tourismboard.az** can go to `/set-password` and
+- **Anyone @shahdag.az, @tourismboard.az or @pgi.ad** can go to `/set-password` and
   register without being listed; the site adds their row. Nothing checks they
   own the mailbox. The domains are `ALLOWED_DOMAINS` in `lib/sheets.ts`.
 - **Invite someone else:** add their email in column A, leave B empty. They go

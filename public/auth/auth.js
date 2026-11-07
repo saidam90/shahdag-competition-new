@@ -6,7 +6,7 @@
     "no-password":
       "You haven't set a password yet. Use “Set your password” below.",
     "not-listed":
-      "Use your @shahdag.az or @tourismboard.az email, or ask the organisers to add you.",
+      "Use your @shahdag.az, @tourismboard.az or @pgi.ad email, or ask the organisers to add you.",
     "already-set":
       "A password is already set for this email. Sign in, or ask the organisers to reset it.",
     short: "Use at least 10 characters.",

@@ -8,6 +8,10 @@ type AgendaEvent =
   | { note: string; time?: undefined; title?: undefined; section?: undefined; subsection?: undefined }
   | { time: string; title: string; section?: undefined; subsection?: undefined; note?: undefined };
 
+// Detailed day-by-day programme (2026 times). Not shown for now: the 2027
+// schedule only has dates and races so far. When the timings are ready,
+// update this data and switch the default export at the bottom of the file
+// back to DetailedAgenda.
 const agendaData: { day: string; date: string; events: AgendaEvent[] }[] = [
   {
     day: "Day 1 – Opening Program",
@@ -128,7 +132,7 @@ const agendaData: { day: string; date: string; events: AgendaEvent[] }[] = [
   },
 ];
 
-const Agenda = () => {
+const DetailedAgenda = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
@@ -258,5 +262,58 @@ const Agenda = () => {
     </section>
   );
 };
+
+// Simple 2027 schedule: one line per day, until detailed timings are ready.
+const schedule: { weekday: string; date: string; title: string; rest?: boolean }[] = [
+  { weekday: "Thursday", date: "11 March 2027", title: "Opening" },
+  { weekday: "Friday", date: "12 March 2027", title: "Sprint" },
+  { weekday: "Saturday", date: "13 March 2027", title: "Mixed Relay" },
+  { weekday: "Sunday", date: "14 March 2027", title: "Rest Day", rest: true },
+  { weekday: "Monday", date: "15 March 2027", title: "Team Race" },
+  { weekday: "Tuesday", date: "16 March 2027", title: "Rest Day", rest: true },
+  { weekday: "Wednesday", date: "17 March 2027", title: "Individual Race" },
+  { weekday: "Thursday", date: "18 March 2027", title: "Vertical Race" },
+];
+
+const Agenda = () => (
+  <section id="agenda" className="py-12 md:py-20 bg-secondary/30">
+    <div className="container mx-auto px-4">
+      <div className="text-center mb-8 md:mb-12">
+        <div className="inline-flex items-center gap-2 bg-icon-gold rounded-full px-4 py-2 mb-4">
+          <Calendar className="w-5 h-5 text-white" />
+          <span className="text-sm font-semibold text-white">
+            EVENT SCHEDULE
+          </span>
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold text-primary my-4">
+          Agenda
+        </h2>
+      </div>
+
+      <ol className="max-w-3xl mx-auto bg-card rounded-xl shadow-lg divide-y divide-border overflow-hidden">
+        {schedule.map((day) => (
+          <li
+            key={day.date}
+            className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6 px-6 py-4 md:px-10"
+          >
+            <p className="sm:w-56 shrink-0 text-sm text-muted-foreground">
+              <span className="font-semibold text-foreground">{day.weekday}</span>,{" "}
+              {day.date}
+            </p>
+            <p
+              className={
+                day.rest
+                  ? "text-base italic text-muted-foreground"
+                  : "text-lg font-bold text-primary"
+              }
+            >
+              {day.title}
+            </p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+);
 
 export default Agenda;

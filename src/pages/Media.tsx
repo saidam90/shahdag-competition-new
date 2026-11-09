@@ -6,7 +6,21 @@ const Media = () => {
     {
       title: "Media accreditation",
       icon: BadgeCheck,
-      text: "Please submit your accreditation application at least 30 working days before your trip.",
+      text: (
+        <>
+          Please submit your accreditation application at least 30 working
+          days before your trip. See the full{" "}
+          <a
+            href="https://tourismboard.az/page/1333-guidelines"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline font-medium"
+          >
+            media guidelines on the Azerbaijan Tourism Board website
+          </a>
+          .
+        </>
+      ),
     },
     {
       title: "Drones & location filming",

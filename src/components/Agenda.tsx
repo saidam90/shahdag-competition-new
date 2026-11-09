@@ -3,21 +3,44 @@ import { Calendar, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 type AgendaEvent =
-  | { section: string; time?: undefined; title?: undefined; subsection?: undefined; note?: undefined }
-  | { subsection: string; time?: undefined; title?: undefined; section?: undefined; note?: undefined }
-  | { note: string; time?: undefined; title?: undefined; section?: undefined; subsection?: undefined }
-  | { time: string; title: string; section?: undefined; subsection?: undefined; note?: undefined };
+  | {
+      section: string;
+      time?: undefined;
+      title?: undefined;
+      subsection?: undefined;
+      note?: undefined;
+    }
+  | {
+      subsection: string;
+      time?: undefined;
+      title?: undefined;
+      section?: undefined;
+      note?: undefined;
+    }
+  | {
+      note: string;
+      time?: undefined;
+      title?: undefined;
+      section?: undefined;
+      subsection?: undefined;
+    }
+  | {
+      time: string;
+      title: string;
+      section?: undefined;
+      subsection?: undefined;
+      note?: undefined;
+    };
 
-// Detailed day-by-day programme (2026 times). Not shown for now: the 2027
-// schedule only has dates and races so far. When the timings are ready,
-// update this data and switch the default export at the bottom of the file
-// back to DetailedAgenda.
 const agendaData: { day: string; date: string; events: AgendaEvent[] }[] = [
   {
     day: "Day 1 – Opening Program",
     date: "Tuesday, March 3, 2026",
     events: [
-      { time: "18:00–19:00", title: "Bib distribution & Team Captains Meeting" },
+      {
+        time: "18:00–19:00",
+        title: "Bib distribution & Team Captains Meeting",
+      },
       { time: "19:00–20:00", title: "Opening Ceremony" },
       { time: "20:00–21:00", title: "Dinner" },
     ],
@@ -84,7 +107,10 @@ const agendaData: { day: string; date: string; events: AgendaEvent[] }[] = [
       { time: "14:47", title: "Flower Ceremony" },
       { time: "15:15", title: "Final B (if required)" },
       { section: "Evening" },
-      { time: "17:00–18:00", title: "Bib distribution & Team Captains Meeting" },
+      {
+        time: "17:00–18:00",
+        title: "Bib distribution & Team Captains Meeting",
+      },
       { time: "18:00", title: "Awards Ceremony" },
       { time: "19:00", title: "Dinner" },
     ],
@@ -109,10 +135,7 @@ const agendaData: { day: string; date: string; events: AgendaEvent[] }[] = [
   {
     day: "Day 5 – Rest Day",
     date: "Saturday, March 7, 2026",
-    events: [
-      { note: "Rest Day" },
-      { time: "19:00", title: "Dinner" },
-    ],
+    events: [{ note: "Rest Day" }, { time: "19:00", title: "Dinner" }],
   },
   {
     day: "Day 6 – Vertical",
@@ -132,7 +155,7 @@ const agendaData: { day: string; date: string; events: AgendaEvent[] }[] = [
   },
 ];
 
-const DetailedAgenda = () => {
+const Agenda = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
@@ -181,27 +204,39 @@ const DetailedAgenda = () => {
                 {agendaData[currentIndex].events.map((event, eventIdx) => {
                   if ("section" in event && event.section) {
                     return (
-                      <p key={eventIdx} className="text-sm font-bold text-primary uppercase tracking-wide pt-2">
+                      <p
+                        key={eventIdx}
+                        className="text-sm font-bold text-primary uppercase tracking-wide pt-2"
+                      >
                         {event.section}
                       </p>
                     );
                   }
                   if ("note" in event && event.note) {
                     return (
-                      <p key={eventIdx} className="text-xs italic text-muted-foreground pl-1">
+                      <p
+                        key={eventIdx}
+                        className="text-xs italic text-muted-foreground pl-1"
+                      >
                         {event.note}
                       </p>
                     );
                   }
                   if ("subsection" in event && event.subsection) {
                     return (
-                      <p key={eventIdx} className="text-xs font-semibold text-[hsl(45,23%,42%)] uppercase tracking-wide pl-1">
+                      <p
+                        key={eventIdx}
+                        className="text-xs font-semibold text-[hsl(45,23%,42%)] uppercase tracking-wide pl-1"
+                      >
                         {event.subsection}
                       </p>
                     );
                   }
                   return (
-                    <div key={eventIdx} className="flex gap-4 items-start group">
+                    <div
+                      key={eventIdx}
+                      className="flex gap-4 items-start group"
+                    >
                       <div className="bg-primary/5 rounded-lg p-2">
                         <Clock className="w-4 h-4 text-icon-gold" />
                       </div>
@@ -262,58 +297,5 @@ const DetailedAgenda = () => {
     </section>
   );
 };
-
-// Simple 2027 schedule: one line per day, until detailed timings are ready.
-const schedule: { weekday: string; date: string; title: string; rest?: boolean }[] = [
-  { weekday: "Thursday", date: "11 March 2027", title: "Opening" },
-  { weekday: "Friday", date: "12 March 2027", title: "Sprint" },
-  { weekday: "Saturday", date: "13 March 2027", title: "Mixed Relay" },
-  { weekday: "Sunday", date: "14 March 2027", title: "Rest Day", rest: true },
-  { weekday: "Monday", date: "15 March 2027", title: "Team Race" },
-  { weekday: "Tuesday", date: "16 March 2027", title: "Rest Day", rest: true },
-  { weekday: "Wednesday", date: "17 March 2027", title: "Individual Race" },
-  { weekday: "Thursday", date: "18 March 2027", title: "Vertical Race" },
-];
-
-const Agenda = () => (
-  <section id="agenda" className="py-12 md:py-20 bg-secondary/30">
-    <div className="container mx-auto px-4">
-      <div className="text-center mb-8 md:mb-12">
-        <div className="inline-flex items-center gap-2 bg-icon-gold rounded-full px-4 py-2 mb-4">
-          <Calendar className="w-5 h-5 text-white" />
-          <span className="text-sm font-semibold text-white">
-            EVENT SCHEDULE
-          </span>
-        </div>
-        <h2 className="text-4xl md:text-5xl font-bold text-primary my-4">
-          Agenda
-        </h2>
-      </div>
-
-      <ol className="max-w-3xl mx-auto bg-card rounded-xl shadow-lg divide-y divide-border overflow-hidden">
-        {schedule.map((day) => (
-          <li
-            key={day.date}
-            className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6 px-6 py-4 md:px-10"
-          >
-            <p className="sm:w-56 shrink-0 text-sm text-muted-foreground">
-              <span className="font-semibold text-foreground">{day.weekday}</span>,{" "}
-              {day.date}
-            </p>
-            <p
-              className={
-                day.rest
-                  ? "text-base italic text-muted-foreground"
-                  : "text-lg font-bold text-primary"
-              }
-            >
-              {day.title}
-            </p>
-          </li>
-        ))}
-      </ol>
-    </div>
-  </section>
-);
 
 export default Agenda;

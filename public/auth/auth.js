@@ -5,8 +5,7 @@
     invalid: "Email or password is incorrect.",
     "no-password":
       "You haven't set a password yet. Use “Set your password” below.",
-    "not-listed":
-      "This email doesn't have access. Please contact the admins.",
+    "not-listed": "Error. Please contact the admins.",
     "already-set":
       "A password is already set for this email. Sign in, or ask the organisers to reset it.",
     short: "Use at least 10 characters.",
@@ -32,11 +31,14 @@
   if (next) {
     next.value =
       params.get("next") ||
-      (location.pathname === "/login" ? "/" : location.pathname + location.search);
+      (location.pathname === "/login"
+        ? "/"
+        : location.pathname + location.search);
   }
 
-  var focus = email && email.value
-    ? document.querySelector('input[type="password"]')
-    : email;
+  var focus =
+    email && email.value
+      ? document.querySelector('input[type="password"]')
+      : email;
   if (focus) focus.focus();
 })();
